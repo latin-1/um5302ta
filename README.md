@@ -4,13 +4,17 @@
 
 <https://patchwork.kernel.org/project/linux-acpi/list/?series=652035>
 
-## Bluetooth
+## Touchpad
 
-<https://patchwork.kernel.org/project/bluetooth/list/?series=653792>
+> TBD
 
 ## Sound
 
 > TBD
+
+## Bluetooth
+
+<https://patchwork.kernel.org/project/bluetooth/list/?series=653792>
 
 ## Suspend
 
