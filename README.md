@@ -2,7 +2,7 @@
 
 ## Keyboard
 
-<https://patchwork.kernel.org/project/linux-acpi/list/?series=652035>
+<https://patchwork.kernel.org/project/linux-acpi/list/?series=655231>
 
 ## Touchpad
 
