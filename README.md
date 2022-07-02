@@ -2,11 +2,12 @@
 
 ## Keyboard
 
-<./patches/kernel/v5-ACPI-skip-IRQ1-override-on-3-Ryzen-6000-laptops.patch>
+Patch:
+[kernel/v5-ACPI-skip-IRQ1-override-on-3-Ryzen-6000-laptops.patch](./patches/kernel/v5-ACPI-skip-IRQ1-override-on-3-Ryzen-6000-laptops.patch)
 ([source](https://patchwork.kernel.org/project/linux-acpi/list/?series=655231))
 
 <details>
-<summary>diff</summary>
+<summary>content</summary>
 
 ```diff
 diff --git a/drivers/acpi/resource.c b/drivers/acpi/resource.c
@@ -63,10 +64,11 @@ index c2d494784425..0491da180fc5 100644
 
 ## Sound
 
-<./patches/kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch>
+Patch:
+[kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch](./patches/kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch)
 
 <details>
-<summary>diff</summary>
+<summary>content</summary>
 
 ```diff
 diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
@@ -85,10 +87,11 @@ index cee69fa7e246..2e4dbd14e43f 100644
 
 </details>
 
-<./patches/kernel/v0-ASoC-cs35l41-CSC3551.patch>
+Patch:
+[kernel/v0-ASoC-cs35l41-CSC3551.patch](./patches/kernel/v0-ASoC-cs35l41-CSC3551.patch)
 
 <details>
-<summary>diff</summary>
+<summary>content</summary>
 
 ```diff
 diff --git a/sound/pci/hda/cs35l41_hda.c b/sound/pci/hda/cs35l41_hda.c
@@ -114,11 +117,12 @@ TBD
 
 ## Bluetooth
 
-<./patches/kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch>
+Patch:
+[kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch](./patches/kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch)
 ([source](https://patchwork.kernel.org/project/bluetooth/list/?series=653792))
 
 <details>
-<summary>diff</summary>
+<summary>content</summary>
 
 ```diff
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
@@ -145,10 +149,11 @@ index fb1a67189412..23ff919d7768 100644
 options mem_sleep_default=deep
 ```
 
-<./patches/acpi/dsdt.patch>
+Patch:
+[acpi/dsdt.patch](./patches/acpi/dsdt.patch)
 
 <details>
-<summary>diff</summary>
+<summary>content</summary>
 
 ```diff
 diff --git a/dsdt.dsl b/dsdt.dsl
