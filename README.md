@@ -157,7 +157,7 @@ Patch:
 
 ```diff
 diff --git a/dsdt.dsl b/dsdt.dsl
-index 6977240..43bbb4c 100644
+index 01b8c57..fa83d84 100644
 --- a/dsdt.dsl
 +++ b/dsdt.dsl
 @@ -18,7 +18,7 @@
@@ -165,10 +165,19 @@ index 6977240..43bbb4c 100644
   *     Compiler Version 0x20200717 (538969879)
   */
 -DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
-+DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072010)
++DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x0107200A)
  {
      External (_SB_.ALIB, MethodObj)    // 2 Arguments
      External (_SB_.APTS, MethodObj)    // 1 Arguments
+@@ -413,7 +413,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
+
+     Name (SS1, Zero)
+     Name (SS2, Zero)
+-    Name (SS3, Zero)
++    Name (SS3, One)
+     Name (SS4, One)
+     Name (IOST, 0xFFFF)
+     Name (TOPM, 0x00000000)
 @@ -3298,7 +3298,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
          Zero,
          Zero
