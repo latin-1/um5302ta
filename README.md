@@ -2,12 +2,10 @@
 
 ## Keyboard
 
-Patch:
-[kernel/v5-ACPI-skip-IRQ1-override-on-3-Ryzen-6000-laptops.patch](./patches/kernel/v5-ACPI-skip-IRQ1-override-on-3-Ryzen-6000-laptops.patch)
-([source](https://patchwork.kernel.org/project/linux-acpi/list/?series=655231))
-
 <details>
-<summary>content</summary>
+<summary>
+Patch: <a href="./patches/kernel/v5-ACPI-skip-IRQ1-override-on-3-Ryzen-6000-laptops.patch">kernel/v5-ACPI-skip-IRQ1-override-on-3-Ryzen-6000-laptops.patch</a> (<a href="https://patchwork.kernel.org/project/linux-acpi/list/?series=655231">source</a>)
+</summary>
 
 ```diff
 diff --git a/drivers/acpi/resource.c b/drivers/acpi/resource.c
@@ -64,11 +62,10 @@ index c2d494784425..0491da180fc5 100644
 
 ## Sound
 
-Patch:
-[kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch](./patches/kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch)
-
 <details>
-<summary>content</summary>
+<summary>
+Patch: <a href="./patches/kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch">kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch</a>
+</summary>
 
 ```diff
 diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
@@ -87,11 +84,10 @@ index cee69fa7e246..2e4dbd14e43f 100644
 
 </details>
 
-Patch:
-[kernel/v0-ASoC-cs35l41-CSC3551.patch](./patches/kernel/v0-ASoC-cs35l41-CSC3551.patch)
-
 <details>
-<summary>content</summary>
+<summary>
+Patch: <a href="./patches/kernel/v0-ASoC-cs35l41-CSC3551.patch">kernel/v0-ASoC-cs35l41-CSC3551.patch</a>
+</summary>
 
 ```diff
 diff --git a/sound/pci/hda/cs35l41_hda.c b/sound/pci/hda/cs35l41_hda.c
@@ -117,12 +113,10 @@ index cce27a86267f..7374565ecf15 100644
 
 ## Bluetooth
 
-Patch:
-[kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch](./patches/kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch)
-([source](https://patchwork.kernel.org/project/bluetooth/list/?series=653792))
-
 <details>
-<summary>content</summary>
+<summary>
+Patch: <a href="./patches/kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a> (<a href="https://patchwork.kernel.org/project/bluetooth/list/?series=653792">source</a>)
+</summary>
 
 ```diff
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
@@ -149,11 +143,10 @@ index fb1a67189412..23ff919d7768 100644
 options mem_sleep_default=deep
 ```
 
-Patch:
-[acpi/dsdt.patch](./patches/acpi/dsdt.patch)
-
 <details>
-<summary>content</summary>
+<summary>
+Patch: <a href="./patches/acpi/dsdt.patch">acpi/dsdt.patch</a>
+</summary>
 
 ```diff
 diff --git a/dsdt.dsl b/dsdt.dsl
