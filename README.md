@@ -1,5 +1,9 @@
 # Zenbook S 13 OLED (UM5302TA)
 
+## Arch Linux
+
+Install [linux-mainline-um5302ta](https://aur.archlinux.org/packages/linux-mainline-um5302ta) from AUR, then skip to the [Suspend](#suspend) section.
+
 ## Keyboard
 
 <details>
@@ -56,10 +60,6 @@ index c2d494784425..0491da180fc5 100644
 
 </details>
 
-## Touchpad
-
-> TBD
-
 ## Sound
 
 <details>
@@ -106,10 +106,6 @@ index cce27a86267f..7374565ecf15 100644
 ```
 
 </details>
-
-## Network
-
-> TBD
 
 ## Bluetooth
 
