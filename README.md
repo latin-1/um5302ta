@@ -145,7 +145,7 @@ Update the BIOS to version 307.
 S3 Suspend
 </summary>
 
-> **Warning**
+> **Warning**  
 > S3 suspend might be unreliable and result in freezing.
 
 ```
