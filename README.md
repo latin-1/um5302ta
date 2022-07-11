@@ -140,10 +140,7 @@ Install [linux-firmware-git](https://aur.archlinux.org/packages/linux-firmware-g
 Update the BIOS to version 307.  
 <https://www.asus.com/Laptops/For-Home/Zenbook/Zenbook-S-13-OLED-UM5302-AMD-Ryzen-6000-series/HelpDesk_BIOS/>
 
-<details>
-<summary>
-S3 Suspend
-</summary>
+### S3 Suspend
 
 > **Warning**  
 > S3 suspend might be unreliable and result in freezing.
@@ -194,5 +191,3 @@ index 01b8c57..fa83d84 100644
 </details>
 
 See also: <https://wiki.archlinux.org/title/DSDT>
-
-</details>
