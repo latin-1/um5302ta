@@ -137,11 +137,13 @@ index fb1a67189412..23ff919d7768 100644
 
 Install [linux-firmware-git](https://aur.archlinux.org/packages/linux-firmware-git) from AUR.
 
-Update the BIOS to version 307.
-
+Update the BIOS to version 307.  
 <https://www.asus.com/Laptops/For-Home/Zenbook/Zenbook-S-13-OLED-UM5302-AMD-Ryzen-6000-series/HelpDesk_BIOS/>
 
-<del>
+<details>
+<summary>
+S3 Suspend
+</summary>
 
 ```
 options mem_sleep_default=deep
@@ -190,4 +192,4 @@ index 01b8c57..fa83d84 100644
 
 See also: <https://wiki.archlinux.org/title/DSDT>
 
-</del>
+</details>
