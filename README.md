@@ -135,6 +135,8 @@ index fb1a67189412..23ff919d7768 100644
 
 ## Suspend
 
+Install [linux-firmware-git](https://aur.archlinux.org/packages/linux-firmware-git) from AUR.
+
 Update the BIOS to version 307.
 
 <https://www.asus.com/Laptops/For-Home/Zenbook/Zenbook-S-13-OLED-UM5302-AMD-Ryzen-6000-series/HelpDesk_BIOS/>
