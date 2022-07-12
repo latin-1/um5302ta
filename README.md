@@ -8,54 +8,31 @@ Install [linux-mainline-um5302ta](https://aur.archlinux.org/packages/linux-mainl
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/v5-ACPI-skip-IRQ1-override-on-3-Ryzen-6000-laptops.patch">kernel/v5-ACPI-skip-IRQ1-override-on-3-Ryzen-6000-laptops.patch</a> (<a href="https://patchwork.kernel.org/project/linux-acpi/list/?series=655231">source</a>)
+Patch: <a href="./patches/kernel/v6-ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/v6-ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a> (<a href="https://patchwork.kernel.org/project/linux-acpi/list/?series=658747">source</a>)
 </summary>
 
 ```diff
 diff --git a/drivers/acpi/resource.c b/drivers/acpi/resource.c
-index c2d494784425..0491da180fc5 100644
+index c2d494784425..510cdec375c4 100644
 --- a/drivers/acpi/resource.c
 +++ b/drivers/acpi/resource.c
-@@ -381,6 +381,31 @@ unsigned int acpi_dev_get_irq_type(int triggering, int polarity)
- }
- EXPORT_SYMBOL_GPL(acpi_dev_get_irq_type);
-
-+static const struct dmi_system_id irq1_edge_low_shared[] = {
-+	{
-+		.ident = "Asus Zenbook S 13 OLED UM5302",
-+		.matches = {
-+			DMI_MATCH(DMI_SYS_VENDOR, "ASUSTeK COMPUTER INC."),
-+			DMI_MATCH(DMI_BOARD_NAME, "UM5302TA"),
-+		},
-+	},
-+	{
-+		.ident = "Lenovo ThinkBook 14 G4+ ARA",
-+		.matches = {
-+			DMI_MATCH(DMI_SYS_VENDOR, "LENOVO"),
-+			DMI_MATCH(DMI_PRODUCT_NAME, "21D0"),
-+		},
-+	},
-+	{
-+		.ident = "Redmi Book Pro 15 2022 Ryzen",
-+		.matches = {
-+			DMI_MATCH(DMI_SYS_VENDOR, "TIMI"),
-+			DMI_MATCH(DMI_BOARD_NAME, "TM2113"),
-+		},
-+	},
-+	{ }
-+};
+@@ -416,6 +416,16 @@ static bool acpi_dev_irq_override(u32 gsi, u8 triggering, u8 polarity,
+ {
+        int i;
+ 
++#ifdef CONFIG_X86
++       /*
++        * IRQ override isn't needed on modern AMD Zen systems and
++        * this override breaks active low IRQs on AMD Ryzen 6000 and
++        * newer systems. Skip it.
++        */
++       if (boot_cpu_has(X86_FEATURE_ZEN))
++               return false;
++#endif
 +
- static const struct dmi_system_id medion_laptop[] = {
- 	{
- 		.ident = "MEDION P15651",
-@@ -408,6 +433,7 @@ struct irq_override_cmp {
- };
-
- static const struct irq_override_cmp skip_override_table[] = {
-+	{ irq1_edge_low_shared, 1, ACPI_EDGE_SENSITIVE, ACPI_ACTIVE_LOW, 1 },
- 	{ medion_laptop, 1, ACPI_LEVEL_SENSITIVE, ACPI_ACTIVE_LOW, 0 },
- };
-
+        for (i = 0; i < ARRAY_SIZE(skip_override_table); i++) {
+                const struct irq_override_cmp *entry = &skip_override_table[i];
+ 
 ```
 
 </details>
