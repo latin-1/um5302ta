@@ -19,7 +19,7 @@ index c2d494784425..510cdec375c4 100644
 @@ -416,6 +416,16 @@ static bool acpi_dev_irq_override(u32 gsi, u8 triggering, u8 polarity,
  {
         int i;
- 
+
 +#ifdef CONFIG_X86
 +       /*
 +        * IRQ override isn't needed on modern AMD Zen systems and
@@ -32,12 +32,12 @@ index c2d494784425..510cdec375c4 100644
 +
         for (i = 0; i < ARRAY_SIZE(skip_override_table); i++) {
                 const struct irq_override_cmp *entry = &skip_override_table[i];
- 
+
 ```
 
 </details>
 
-## Sound
+## Speaker
 
 <details>
 <summary>
@@ -84,6 +84,10 @@ index cce27a86267f..7374565ecf15 100644
 
 </details>
 
+## Microphone
+
+⚠️ Not work.
+
 ## Bluetooth
 
 <details>
@@ -112,15 +116,16 @@ index fb1a67189412..23ff919d7768 100644
 
 ## Suspend
 
-Install [linux-firmware-git](https://aur.archlinux.org/packages/linux-firmware-git) from AUR if you are using Arch Linux, or build a package from the [repository](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/) by yourself.
+### Modern Standby (S0ix)
 
-Update the BIOS to version 307 or above.  
+Install [linux-firmware-git](https://aur.archlinux.org/packages/linux-firmware-git) from AUR if you are using Arch Linux, or build a custom package with the latest firmware from the [this](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/) repository.
+
+Update the BIOS to the latest version (optional).  
 <https://www.asus.com/Laptops/For-Home/Zenbook/Zenbook-S-13-OLED-UM5302-AMD-Ryzen-6000-series/HelpDesk_BIOS/>
 
-### S3 Suspend
+### S3 Sleep (not recommended)
 
-> **Warning**  
-> S3 suspend might be unreliable and result in freezing.
+S3 suspend might be unreliable and result in freezing.
 
 ```
 options mem_sleep_default=deep
@@ -168,3 +173,17 @@ index 01b8c57..fa83d84 100644
 </details>
 
 See also: <https://wiki.archlinux.org/title/DSDT>
+
+## AMD GPU
+
+### Latency / Flicker
+
+Try to disable the PSR (panel self refresh) for AMD GPU.
+
+```
+option amdgpu.dcdebugmask=0x10
+```
+
+## Fingerprint
+
+⚠️ Not work. <https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402>
