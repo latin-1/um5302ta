@@ -2,7 +2,7 @@
 
 ## Arch Linux
 
-Install [linux-mainline-um5302ta](https://aur.archlinux.org/packages/linux-mainline-um5302ta) from AUR, then skip to the [Suspend](#suspend) section.
+Install [linux-mainline-um5302ta](https://aur.archlinux.org/packages/linux-mainline-um5302ta) from AUR, then skip to the [suspend](#suspend) section.
 
 ## Keyboard
 
