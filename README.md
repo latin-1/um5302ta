@@ -8,7 +8,7 @@ Install [linux-mainline-um5302ta](https://aur.archlinux.org/packages/linux-mainl
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/v6-ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/v6-ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a> (<a href="https://patchwork.kernel.org/project/linux-acpi/list/?series=658747">source</a>)
+Patch: <a href="./patches/kernel/v6-ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/v6-ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a> (will be in 5.20: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
 </summary>
 
 ```diff
@@ -41,7 +41,7 @@ index c2d494784425..510cdec375c4 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch">kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch</a>
+Patch: <a href="./patches/kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch">kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch</a> (rejected upstream: <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20220703053225.2203-1-xw897002528@gmail.com/">source</a>)
 </summary>
 
 ```diff
@@ -63,7 +63,7 @@ index cee69fa7e246..2e4dbd14e43f 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/v0-ASoC-cs35l41-CSC3551.patch">kernel/v0-ASoC-cs35l41-CSC3551.patch</a>
+Patch: <a href="./patches/kernel/v0-ASoC-cs35l41-CSC3551.patch">kernel/v0-ASoC-cs35l41-CSC3551.patch</a> (rejected upstream: <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20220703053225.2203-1-xw897002528@gmail.com/">source</a>)
 </summary>
 
 ```diff
@@ -92,7 +92,7 @@ index cce27a86267f..7374565ecf15 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a> (<a href="https://patchwork.kernel.org/project/bluetooth/list/?series=653792">source</a>)
+Patch: <a href="./patches/kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a> (will be in 5.20: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=57117d7234dadfba2a83615b2a9369f6f2f9914f">source</a>)
 </summary>
 
 ```diff
