@@ -120,15 +120,6 @@ index fb1a67189412..23ff919d7768 100644
 
 Modern standby should work out-of-box.
 
-<del>
-
-Install [linux-firmware-git](https://aur.archlinux.org/packages/linux-firmware-git) from AUR if you are using Arch Linux, or build a custom package with the latest firmware from the [this](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/) repository.
-
-Update the BIOS to the latest version (optional).  
-<https://www.asus.com/Laptops/For-Home/Zenbook/Zenbook-S-13-OLED-UM5302-AMD-Ryzen-6000-series/HelpDesk_BIOS/>
-
-</del>
-
 ### S3 Sleep (not recommended)
 
 S3 suspend might be unreliable and result in freezing.
