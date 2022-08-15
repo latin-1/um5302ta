@@ -8,7 +8,7 @@ Install [linux-mainline-um5302ta](https://aur.archlinux.org/packages/linux-mainl
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/v6-ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/v6-ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a> (will be in 5.20: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
+Patch: <a href="./patches/kernel/v6-ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/v6-ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a> (already in 6.0: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
 </summary>
 
 ```diff
@@ -92,7 +92,7 @@ index cce27a86267f..7374565ecf15 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a> (will be in 5.20: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=57117d7234dadfba2a83615b2a9369f6f2f9914f">source</a>)
+Patch: <a href="./patches/kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/v4-Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a> (already in 6.0: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=57117d7234dadfba2a83615b2a9369f6f2f9914f">source</a>)
 </summary>
 
 ```diff
