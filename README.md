@@ -41,15 +41,15 @@ index c2d494784425..510cdec375c4 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch">kernel/v0-ALSA-hda-realtek-Add-quirk-for-ASUS-UM5302TA.patch</a> (rejected upstream: <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20220703053225.2203-1-xw897002528@gmail.com/">source</a>)
+Patch: <a href="./patches/kernel/patch-realtek-um5302ta-quirk.patch">kernel/patch-realtek-um5302ta-quirk.patch</a> (rejected upstream: <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20220703053225.2203-1-xw897002528@gmail.com/">source</a>)
 </summary>
 
 ```diff
 diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
-index cee69fa7e246..2e4dbd14e43f 100644
+index fd630d62b5a0..3c31bd17e091 100644
 --- a/sound/pci/hda/patch_realtek.c
 +++ b/sound/pci/hda/patch_realtek.c
-@@ -9137,6 +9137,7 @@ static const struct snd_pci_quirk alc269_fixup_tbl[] = {
+@@ -9313,6 +9313,7 @@ static const struct snd_pci_quirk alc269_fixup_tbl[] = {
  	SND_PCI_QUIRK(0x1043, 0x1e51, "ASUS Zephyrus M15", ALC294_FIXUP_ASUS_GU502_PINS),
  	SND_PCI_QUIRK(0x1043, 0x1e8e, "ASUS Zephyrus G15", ALC289_FIXUP_ASUS_GA401),
  	SND_PCI_QUIRK(0x1043, 0x1f11, "ASUS Zephyrus G14", ALC289_FIXUP_ASUS_GA401),
@@ -63,23 +63,23 @@ index cee69fa7e246..2e4dbd14e43f 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/v0-ASoC-cs35l41-CSC3551.patch">kernel/v0-ASoC-cs35l41-CSC3551.patch</a> (rejected upstream: <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20220703053225.2203-1-xw897002528@gmail.com/">source</a>)
+Patch: <a href="./patches/kernel/cs35l42-hda-no-acpi-dsd-csc3551.patch">kernel/cs35l42-hda-no-acpi-dsd-csc3551.patch</a> (rejected upstream: <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20220703053225.2203-1-xw897002528@gmail.com/">source</a>)
 </summary>
 
 ```diff
 diff --git a/sound/pci/hda/cs35l41_hda.c b/sound/pci/hda/cs35l41_hda.c
-index cce27a86267f..7374565ecf15 100644
+index 129bffb431c2..ca3f53bba93d 100644
 --- a/sound/pci/hda/cs35l41_hda.c
 +++ b/sound/pci/hda/cs35l41_hda.c
-@@ -420,7 +420,7 @@ static int cs35l41_hda_read_acpi(struct cs35l41_hda *cs35l41, const char *hid, i
- 	 * And devm functions expect that the device requesting the resource has the correct
- 	 * fwnode.
- 	 */
--	if (strncmp(hid, "CLSA0100", 8) != 0)
-+	if (strncmp(hid, "CLSA0100", 8) != 0 && strncmp(hid, "CSC3551", 7) != 0)
- 		return -EINVAL;
+@@ -1156,7 +1156,7 @@ static int cs35l41_no_acpi_dsd(struct cs35l41_hda *cs35l41, struct device *physd
+ 	hw_cfg->valid = true;
+ 	put_device(physdev);
 
- 	/* check I2C address to assign the index */
+-	if (strncmp(hid, "CLSA0100", 8) == 0) {
++	if (strncmp(hid, "CLSA0100", 8) == 0 || strncmp(hid, "CSC3551", 7) == 0) {
+ 		hw_cfg->bst_type = CS35L41_EXT_BOOST_NO_VSPK_SWITCH;
+ 	} else if (strncmp(hid, "CLSA0101", 8) == 0) {
+ 		hw_cfg->bst_type = CS35L41_EXT_BOOST;
 ```
 
 </details>
