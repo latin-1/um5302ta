@@ -1,4 +1,7 @@
+From 57117d7234dadfba2a83615b2a9369f6f2f9914f Mon Sep 17 00:00:00 2001
 From: He Wang <xw897002528@gmail.com>
+Date: Sat, 25 Jun 2022 17:03:57 +0800
+Subject: Bluetooth: btusb: Add a new VID/PID 0489/e0e2 for MT7922
 
 Add VID/PID 0489:e0e2 for MediaTek MT7922 Bluetooth chip. Found and
 tested with Asus UM5302TA.
@@ -46,15 +49,16 @@ E:  Ad=8a(I) Atr=03(Int.) MxPS= 512 Ivl=125us
 E:  Ad=0a(O) Atr=03(Int.) MxPS= 512 Ivl=125us
 
 Signed-off-by: He Wang <xw897002528@gmail.com>
+Signed-off-by: Luiz Augusto von Dentz <luiz.von.dentz@intel.com>
 ---
  drivers/bluetooth/btusb.c | 3 +++
  1 file changed, 3 insertions(+)
 
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index fb1a67189412..23ff919d7768 100644
+index 205b7d3b1cc3a..21135a419bcc3 100644
 --- a/drivers/bluetooth/btusb.c
 +++ b/drivers/bluetooth/btusb.c
-@@ -480,6 +480,9 @@ static const struct usb_device_id blacklist_table[] = {
+@@ -492,6 +492,9 @@ static const struct usb_device_id blacklist_table[] = {
  	{ USB_DEVICE(0x13d3, 0x3568), .driver_info = BTUSB_MEDIATEK |
  						     BTUSB_WIDEBAND_SPEECH |
  						     BTUSB_VALID_LE_STATES },
@@ -65,4 +69,4 @@ index fb1a67189412..23ff919d7768 100644
  	/* Additional Realtek 8723AE Bluetooth devices */
  	{ USB_DEVICE(0x0930, 0x021d), .driver_info = BTUSB_REALTEK },
 -- 
-2.33.0
+cgit 
