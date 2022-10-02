@@ -114,7 +114,7 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 </details>
 
-### Known issues:
+### Known Issues
 
 - Volume is quite low: <https://bugzilla.kernel.org/show_bug.cgi?id=216495>
 
@@ -211,6 +211,6 @@ Try to disable the PSR (panel self refresh) for AMD GPU.
 option amdgpu.dcdebugmask=0x10
 ```
 
-## ⚠️ Fingerprint
+## Fingerprint
 
-Not work. <https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402>
+⚠️ Not work. <https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402>
