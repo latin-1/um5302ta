@@ -41,7 +41,7 @@ index c2d4947844250..510cdec375c4d 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch">patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch</a> (<a href="https://patchwork.kernel.org/project/alsa-devel/patch/20221028102742.2588687-1-sbinding@opensource.cirrus.com/">source</a>)
+Patch: <a href="./patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch">patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch</a> (will be in 6.1: <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20221028102742.2588687-1-sbinding@opensource.cirrus.com/">source</a>)
 </summary>
 
 ```diff
