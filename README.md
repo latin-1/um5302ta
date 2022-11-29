@@ -156,13 +156,13 @@ index 205b7d3b1cc3a..21135a419bcc3 100644
 
 ✔️ Work
 
-### Modern Standby (S0ix)
+### Modern Standby (S0ix, s2idle)
 
 Modern standby should work out-of-box.
 
-### S3 Sleep (not recommended)
+### S3 Sleep (deep, not recommended)
 
-S3 suspend might be unreliable and result in freezing.
+S3 sleep may be unstable and cause freezing.
 
 ```
 options mem_sleep_default=deep
