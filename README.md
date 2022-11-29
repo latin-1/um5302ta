@@ -6,9 +6,11 @@ Install [linux-mainline-um5302ta](https://aur.archlinux.org/packages/linux-mainl
 
 ## Keyboard
 
+✅ Work (kernel version ≥ 5.19.10 or ≥ 5.15.69 (longterm))
+
 <details>
 <summary>
-Patch: <a href="./patches/kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a> (already in 6.0: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
+Patch: <a href="./patches/kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a> (in kernel 5.15.69 / 5.19.10 / 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
 </summary>
 
 ```diff
@@ -39,9 +41,11 @@ index c2d4947844250..510cdec375c4d 100644
 
 ## Speaker
 
+✅ Patch Required ([details](https://bugzilla.kernel.org/show_bug.cgi?id=216194))
+
 <details>
 <summary>
-Patch: <a href="./patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch">patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch</a> (will be in 6.1: <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20221028102742.2588687-1-sbinding@opensource.cirrus.com/">source</a>)
+Patch: <a href="./patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch">kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch</a> (in kernel 6.0.9 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=8d06679b25fc6813eb2438fac7fa13f4f3c2ef37">source</a>)
 </summary>
 
 ```diff
@@ -63,7 +67,7 @@ index 701a72ec5629a..b4f7ff8cfe41b 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/cs35l42-hda-no-acpi-dsd-csc3551.patch">kernel/cs35l42-hda-no-acpi-dsd-csc3551.patch</a> (rejected upstream: <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20220703053225.2203-1-xw897002528@gmail.com/">source</a>)
+Patch: <a href="./patches/kernel/cs35l42-hda-no-acpi-dsd-csc3551.patch">kernel/cs35l42-hda-no-acpi-dsd-csc3551.patch</a> (rejected, <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20220703053225.2203-1-xw897002528@gmail.com/">source</a>)
 </summary>
 
 ```diff
@@ -86,9 +90,11 @@ index e5f0549bf06d..3917f398334d 100644
 
 ## Microphone
 
+✅ Work (kernel version ≥ 6.0.3)
+
 <details>
 <summary>
-Patch: <a href="patches/kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch">kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch</a> (will be in 6.1: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=4df5b13dec9e1b5a12db47ee92eb3f7da5c3deb5">source</a>)
+Patch: <a href="patches/kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch">kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch</a> (in kernel 6.0.3 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=4df5b13dec9e1b5a12db47ee92eb3f7da5c3deb5">source</a>)
 </summary>
 
 ```diff
@@ -120,9 +126,11 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 ## Bluetooth
 
+✅ Work (kernel version ≥ 6.0)
+
 <details>
 <summary>
-Patch: <a href="./patches/kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a> (already in 6.0: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=57117d7234dadfba2a83615b2a9369f6f2f9914f">source</a>)
+Patch: <a href="./patches/kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a> (in kernel 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=57117d7234dadfba2a83615b2a9369f6f2f9914f">source</a>)
 </summary>
 
 ```diff
@@ -145,6 +153,8 @@ index 205b7d3b1cc3a..21135a419bcc3 100644
 </details>
 
 ## Suspend
+
+✅ Work
 
 ### Modern Standby (S0ix)
 
@@ -199,8 +209,8 @@ index 01b8c57..fa83d84 100644
 
 </details>
 
-See also: <https://wiki.archlinux.org/title/DSDT>
+See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
 
 ## Fingerprint
 
-⚠️ Not work. <https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402>
+⚠️ Not Work ([bug](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402))
