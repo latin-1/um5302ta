@@ -201,16 +201,6 @@ index 01b8c57..fa83d84 100644
 
 See also: <https://wiki.archlinux.org/title/DSDT>
 
-## AMD GPU
-
-### Latency / Flicker
-
-Try to disable the PSR (panel self refresh) for AMD GPU.
-
-```
-option amdgpu.dcdebugmask=0x10
-```
-
 ## Fingerprint
 
 ⚠️ Not work. <https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402>
