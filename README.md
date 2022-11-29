@@ -41,7 +41,7 @@ index c2d4947844250..510cdec375c4d 100644
 
 ## Speaker
 
-✔️ Patch Required ([details](https://bugzilla.kernel.org/show_bug.cgi?id=216194))
+⚠️ Patch Required ([details](https://bugzilla.kernel.org/show_bug.cgi?id=216194))
 
 <details>
 <summary>
