@@ -6,7 +6,7 @@ Install [linux-mainline-um5302ta](https://aur.archlinux.org/packages/linux-mainl
 
 ## Keyboard
 
-✅ Work (kernel version ≥ 5.19.10 or ≥ 5.15.69 (longterm))
+✔️ Work (kernel version ≥ 5.19.10 or ≥ 5.15.69 (longterm))
 
 <details>
 <summary>
@@ -41,7 +41,7 @@ index c2d4947844250..510cdec375c4d 100644
 
 ## Speaker
 
-✅ Patch Required ([details](https://bugzilla.kernel.org/show_bug.cgi?id=216194))
+✔️ Patch Required ([details](https://bugzilla.kernel.org/show_bug.cgi?id=216194))
 
 <details>
 <summary>
@@ -90,7 +90,7 @@ index e5f0549bf06d..3917f398334d 100644
 
 ## Microphone
 
-✅ Work (kernel version ≥ 6.0.3)
+✔️ Work (kernel version ≥ 6.0.3)
 
 <details>
 <summary>
@@ -126,7 +126,7 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 ## Bluetooth
 
-✅ Work (kernel version ≥ 6.0)
+✔️ Work (kernel version ≥ 6.0)
 
 <details>
 <summary>
@@ -154,7 +154,7 @@ index 205b7d3b1cc3a..21135a419bcc3 100644
 
 ## Suspend
 
-✅ Work
+✔️ Work
 
 ### Modern Standby (S0ix)
 
@@ -213,4 +213,4 @@ See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
 
 ## Fingerprint
 
-⚠️ Not Work ([bug](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402))
+❌ Not Work ([bug](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402))
