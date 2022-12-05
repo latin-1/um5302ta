@@ -1,10 +1,24 @@
+GPIO
+====
+
+INDEX    POSITION    GPIO1                         GPIO2                   RESET GPIO
+-----    --------    --------------------------    --------------------    ----------
+40       00          [?] 01 CS35l41_VSPK_SWITCH    02 CS35L41_INTERRUPT    [?]
+41       01          [?] 01 CS35l41_VSPK_SWITCH    02 CS35L41_INTERRUPT    [?]
+
 Config
 ======
 
-##    DATA
---    -----------
-00    11 12 10 00
-01    11 12 10 00
+##    DATA           NOTE
+--    -----------    ----
+00    11 12 10 00    [?]
+01    11 12 10 00    [?]
+
+Settings
+========
+
+ExternalVspkControl    [?]
+EnableAutoCal          [?]
 
 InitSequence
 ============
@@ -20,9 +34,9 @@ InitSequence
       CS35L41_SP_FORMAT           00 00 48 08    20 20 02 00    18 18 02 00    20 20 02 00    20 20 02 00    <none>
       CS35L41_SP_HIZ_CTRL         00 00 48 0C    00 00 00 03    00 00 00 02    00 00 00 02    00 00 00 03    <none>
 
-01    CS35L41_SP_FRAME_TX_SLOT    00 00 48 10    06 04 02 00    03 02 01 00    <none>         <none>
+01    CS35L41_SP_FRAME_TX_SLOT    00 00 48 10    06 04 02 00    03 02 01 00    <none>         <none>         [?]
 
-02    CS35L41_SP_FRAME_TX_SLOT    00 00 48 10    07 05 03 01    03 02 01 00    <none>         <none>
+02    CS35L41_SP_FRAME_TX_SLOT    00 00 48 10    07 05 03 01    03 02 01 00    <none>         <none>         [?]
 
 03    CS35L41_SP_TX_WL            00 00 48 30    00 00 00 18    00 00 00 18    00 00 00 18    00 00 00 18    <none>
       CS35L41_SP_RX_WL            00 00 48 40    00 00 00 18    00 00 00 18    00 00 00 18    00 00 00 18    <none>
@@ -37,6 +51,6 @@ InitSequence
       CS35L41_DSP1_RX4_SRC        00 00 4C 4C    00 00 00 19    00 00 00 19    00 00 00 19    00 00 00 19    <none>
       CS35L41_DSP1_RX5_SRC        00 00 4C 50    00 00 00 28    00 00 00 20    00 00 00 20    00 00 00 29    VPMON
 
-      CS35L41_PWR_CTRL2           00 00 20 18    00 00 30 21    00 00 00 00
-      CS35L41_IRQ1_STATUS1        00 01 00 10    FF FF FF FF    <none>
-      CS35L41_IRQ1_MASK1          00 01 01 10    7F FD FE 3F    FF FF FF FF
+      CS35L41_PWR_CTRL2           00 00 20 18    00 00 30 21    00 00 00 00                                  [?]
+      CS35L41_IRQ1_STATUS1        00 01 00 10    FF FF FF FF    <none>                                       [?]
+      CS35L41_IRQ1_MASK1          00 01 01 10    7F FD FE 3F    FF FF FF FF                                  [?]
