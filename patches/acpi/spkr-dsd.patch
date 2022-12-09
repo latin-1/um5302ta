@@ -1,5 +1,5 @@
 diff --git a/dsdt.dsl b/dsdt.dsl
-index 93b56ed..ff4b2b8 100644
+index 20c99d1..79f8833 100644
 --- a/dsdt.dsl
 +++ b/dsdt.dsl
 @@ -18,7 +18,7 @@
@@ -11,7 +11,7 @@ index 93b56ed..ff4b2b8 100644
  {
      External (_SB_.ALIB, MethodObj)    // 2 Arguments
      External (_SB_.APTS, MethodObj)    // 1 Arguments
-@@ -14734,6 +14734,59 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
+@@ -14734,6 +14734,69 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
              Method (_DIS, 0, NotSerialized)  // _DIS: Disable Device
              {
              }
@@ -19,7 +19,7 @@ index 93b56ed..ff4b2b8 100644
 +            Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
 +            {
 +                ToUUID ("daffd814-6eba-4d8c-8a91-bc9bbf4aa301") /* Device Properties for _DSD */, 
-+                Package (0x04)
++                Package (0x05)
 +                {
 +                    Package (0x02)
 +                    {
@@ -44,6 +44,16 @@ index 93b56ed..ff4b2b8 100644
 +                            Zero, 
 +                            Zero, 
 +                            Zero
++                        }
++                    }, 
++
++                    Package (0x02)
++                    {
++                        "cirrus,speaker-position", 
++                        Package (0x02)
++                        {
++                            Zero, 
++                            One
 +                        }
 +                    }, 
 +
