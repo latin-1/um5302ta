@@ -54,46 +54,40 @@ DSDT
 ====
 
 Device (SPKR) {
-  Name(_DSD, Package(){
-                 ToUUID("daffd814-6eba-4d8c-8a91-bc9bbf4aa301"),
-                 Package(){
-                     Package(){
-                         "cirrus,dev-index",
-                         Package(){0x40, 0x41},
-                     },
-                     Package(){
-                         "reset-gpios",
-                         Package(){
-                             SPKR,
-                             0,
-                             0,
-                             0,
-                             SPKR,
-                             0,
-                             0,
-                             0,
-                         },
-                     },
-                     Package(){
-                         "cirrus,gpio1-func",
-                         Package(){0, 1},
-                     },
-                     Package(){
-                         "cirrus,gpio2-func",
-                         Package(){2, 2},
-                     },
-                     Package(){
-                         "cirrus,boost-peak-milliamp",
-                         Package(){...},
-                     },
-                     Package(){
-                         "cirrus,boost-ind-nanohenry",
-                         Package(){...},
-                     },
-                     Package(){
-                         "cirrus,boost-cap-microfarad",
-                         Package(){...},
-                     },
-                 },
-             })
+  Name (_DSD, Package () {
+    ToUUID("daffd814-6eba-4d8c-8a91-bc9bbf4aa301"),
+    Package () {
+      Package () {
+        "cirrus,dev-index",
+        Package () { 0x40, 0x41 },
+      },
+      Package () {
+        "reset-gpios",
+        Package () {
+          SPKR, 0, 0, 0,
+          SPKR, 0, 0, 0,
+        },
+      },
+      Package () {
+        "cirrus,gpio1-func",
+        Package () { 0, 1 },
+      },
+      Package () {
+        "cirrus,gpio2-func",
+        Package () { 2, 2 },
+      },
+      Package () {
+        "cirrus,boost-peak-milliamp",
+        Package () { ... },
+      },
+      Package () {
+        "cirrus,boost-ind-nanohenry",
+        Package () { ... },
+      },
+      Package () {
+        "cirrus,boost-cap-microfarad",
+        Package () { ... },
+      },
+    },
+  })
 }
