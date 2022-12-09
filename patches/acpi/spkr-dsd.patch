@@ -1,5 +1,5 @@
 diff --git a/dsdt.dsl b/dsdt.dsl
-index 84f723e..688832d 100644
+index 663aa79..f485c41 100644
 --- a/dsdt.dsl
 +++ b/dsdt.dsl
 @@ -18,7 +18,7 @@
@@ -39,11 +39,11 @@ index 84f723e..688832d 100644
 +                            SPKR, 
 +                            Zero, 
 +                            Zero, 
-+                            One, 
++                            Zero, 
 +                            SPKR, 
 +                            Zero, 
 +                            Zero, 
-+                            One
++                            Zero
 +                        }
 +                    }, 
 +
