@@ -1,0 +1,73 @@
+diff --git a/dsdt.dsl b/dsdt.dsl
+index 93b56ed..ff4b2b8 100644
+--- a/dsdt.dsl
++++ b/dsdt.dsl
+@@ -18,7 +18,7 @@
+  *     Compiler ID      "INTL"
+  *     Compiler Version 0x20200717 (538969879)
+  */
+-DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
++DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x0107200A)
+ {
+     External (_SB_.ALIB, MethodObj)    // 2 Arguments
+     External (_SB_.APTS, MethodObj)    // 1 Arguments
+@@ -14734,6 +14734,59 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
+             Method (_DIS, 0, NotSerialized)  // _DIS: Disable Device
+             {
+             }
++
++            Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
++            {
++                ToUUID ("daffd814-6eba-4d8c-8a91-bc9bbf4aa301") /* Device Properties for _DSD */, 
++                Package (0x04)
++                {
++                    Package (0x02)
++                    {
++                        "cirrus,dev-index", 
++                        Package (0x02)
++                        {
++                            0x40, 
++                            0x41
++                        }
++                    }, 
++
++                    Package (0x02)
++                    {
++                        "reset-gpios", 
++                        Package (0x08)
++                        {
++                            SPKR, 
++                            Zero, 
++                            Zero, 
++                            Zero, 
++                            SPKR, 
++                            Zero, 
++                            Zero, 
++                            Zero
++                        }
++                    }, 
++
++                    Package (0x02)
++                    {
++                        "cirrus,gpio1-func", 
++                        Package (0x02)
++                        {
++                            Zero, 
++                            One
++                        }
++                    }, 
++
++                    Package (0x02)
++                    {
++                        "cirrus,gpio2-func", 
++                        Package (0x02)
++                        {
++                            0x02, 
++                            0x02
++                        }
++                    }
++                }
++            })
+         }
+     }
+ 

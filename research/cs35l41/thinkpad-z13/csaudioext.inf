@@ -1,0 +1,1030 @@
+;/*++
+;
+;Copyright (c) Cirrus Logic, Inc.  All rights reserved.
+;
+;   THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+;   KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+;   IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+;   PURPOSE.
+;
+;Module Name:
+;
+;    csaudioext.INF
+;
+;Abstract:
+;
+;    Setup Information for Cirrus Amp Driver
+;
+;--*/
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = Extension
+ClassGuid   = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+Provider    = %ProviderName%
+ExtensionId = {FCD2347D-C3C7-4D4F-B9E7-3C6A1000D458}
+CatalogFile = csaudioext.cat
+DriverVer = 11/21/2022,2.41.19.983
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+10=%Disk_Description%,,,PB_6.39.0\FW\CS35L41\RevB2
+11=%Disk_Description%,,,PB_6.39.0\tunings
+20=%Disk_Description%,,,PB_6.47.0\FW\CS35L41\RevB2
+21=%Disk_Description%,,,PB_6.47.0\tunings
+40=%Disk_Description%,,,PB_6.61.1\FW\CS35L41\RevB2
+41=%Disk_Description%,,,PB_6.61.1\tunings
+50=%Disk_Description%,,,PB_6.63.0\FW\CS35L41\RevB2
+51=%Disk_Description%,,,PB_6.63.0\tunings
+90=%Disk_Description%,,,PB_6.76.0\FW\CS35L41\RevB2
+91=%Disk_Description%,,,PB_6.76.0\CS35L53
+100=%Disk_Description%,,,tunings\Lenovo_Y760_AMD
+101=%Disk_Description%,,,tunings\Lenovo_Y760_Intel
+102=%Disk_Description%,,,tunings\Lenovo-S760-17AA383D_20210811
+105=%Disk_Description%,,,tunings\Lenovo_17AA3865_220111
+106=%Disk_Description%,,,tunings\Lenovo_17AA3866_220111
+107=%Disk_Description%,,,tunings\Lenovo-17AA3845-220422
+108=%Disk_Description%,,,tunings\Lenovo-17AA3846-220211
+121=%Disk_Description%,,,tunings\Lenovo-17AA22F1_20220311
+122=%Disk_Description%,,,tunings\Lenovo-17AA22F2_20220311
+130=%Disk_Description%,,,tunings\Lenovo_17AA386F_20220311
+131=%Disk_Description%,,,tunings\Lenovo_17AA3874_20220311
+132=%Disk_Description%,,,tunings\Lenovo-17AA386E-20211209
+150=%Disk_Description%,,,tunings\Lenovo_17AA2316_20221118
+226=%Disk_Description%,,,tunings\Lenovo_17AA38A9_20221111
+235=%Disk_Description%,,,tunings\Lenovo_17AA38B2_20221118
+
+[SourceDisksFiles]
+;;[PB6.39.0.Firmware.CopyFiles]
+halo_cspl_RAM_revB2_29.41.0.wmfw = 10
+halo_cspl_RAM_diag_revB2_29.41.0.wmfw = 10
+
+;;[PB6.39.0.Tunings.CopyFiles]
+Cal_and_Diag_prince_revB2_left_cal.bin = 11
+Calibration_prince_revB2_left_cal.bin = 11
+Enhance_Prot_Mono_prince_revB2_left.bin = 11
+Protect_Lite_prince_revB2_left.bin = 11
+top_passthrough_prince_revB2_full.bin = 11
+
+;;[PB6.47.0.Firmware.CopyFiles]
+halo_cspl_RAM_revB2_29.49.0.wmfw = 20
+halo_cspl_RAM_diag_revB2_29.49.0.wmfw = 20
+
+;;[PB6.47.0.Tunings.CopyFiles]
+Cal_and_Diag_prince_revB2_48K_left_cal.bin = 21
+Calibration_prince_revB2_48K_left_cal.bin = 21
+Enhance_Prot_Mono_prince_revB2_48K_left.bin = 21
+Protect_Lite_prince_revB2_48K_left.bin = 21
+top_passthrough_prince_revB2_48K_full.bin = 21
+
+;;[PB6.61.1.Firmware.CopyFiles]
+halo_cspl_RAM_revB2_29.63.1.wmfw = 40
+halo_cspl_RAM_diag_revB2_29.63.1.wmfw = 40
+
+;;[PB6.61.1.Tunings.CopyFiles]
+Cal_and_Diag_CS35L41B_48K_29.63.1_left_cal.bin = 41
+Calibration_CS35L41B_48K_29.63.1_left_cal.bin = 41
+Enhance_Prot_Mono_CS35L41B_48K_29.63.1_left.bin = 41
+Protect_Lite_CS35L41B_48K_29.63.1_left.bin = 41
+top_passthrough_CS35L41B_48K_29.63.1_full.bin = 41
+
+;;[PB6.63.0.Firmware.CopyFiles]
+halo_cspl_RAM_revB2_29.65.0.wmfw = 50
+halo_cspl_RAM_diag_revB2_29.65.0.wmfw = 50
+
+;;[PB6.63.0.Tunings.CopyFiles]
+Cal_and_Diag_CS35L41B_48K_29.65.0_left_cal.bin = 51
+Calibration_CS35L41B_48K_29.65.0_left_cal.bin = 51
+Enhance_Prot_Mono_CS35L41B_48K_29.65.0_left.bin = 51
+Protect_Lite_CS35L41B_48K_29.65.0_left.bin = 51
+top_passthrough_CS35L41B_48K_29.65.0_full.bin = 51
+
+;;[PB6.76.0.Firmware.CopyFiles]
+halo_cspl_RAM_diag_revB2_29.78.0.wmfw = 90
+
+;;[PB6.76.0.Tunings.CopyFiles]
+Cal_and_Diag_48K_29.78.0_left_cal.bin = 91
+
+;;[CONF_0100.Tunings.CopyFiles]
+Y760_Luxshare_Cal_Only_Impedance_LS639_8th_Oct_Y21.bin = 100
+Y760_Luxshare_Cal_F0_Impedance_LS639_1216.bin = 100
+Y760_Veco_Cal_Only_Impedance_LS639_8th_Oct_Y21.bin = 100
+Y760_Veco_Cal_F0_Impedance_PB639_1120.bin = 100
+Lenovo_Y760_Luxshare_Left_Spk_Tuning_LS639_0905.bin = 100
+Lenovo_Y760_Luxshare_Right_Spk_Tuning_LS639_0905.bin = 100
+Lenovo_Y760_Veco_Left_Spk_Tuning_LS639_0905.bin = 100
+Lenovo_Y760_Veco_Right_Spk_Tuning_LS639_0905.bin = 100
+
+;;[CONF_0101.Tunings.CopyFiles]
+Y760_Luxshare_Cal_Only_Impedance_LS647_8th_Oct_Y21.bin = 101
+Y760_Veco_Cal_Only_Impedance_LS647_8th_Oct_Y21.bin = 101
+Lenovo_Y760_Luxshare_Left_Spk_Tuning_LS647_0905.bin = 101
+Lenovo_Y760_Luxshare_Right_Spk_Tuning_LS647_0905.bin = 101
+Lenovo_Y760_Veco_Left_Spk_Tuning_LS647_0905.bin = 101
+Lenovo_Y760_Veco_Right_Spk_Tuning_LS647_0905.bin = 101
+
+;;[CONF_0102.Tunings.CopyFiles]
+17AA383D_20210811_A0.bin = 102
+17AA383D_20210811_A0_cal.bin = 102
+17AA383D_20210811_A0_diag.bin = 102
+17AA383D_20210811_A1.bin = 102
+17AA383D_20210811_A1_cal.bin = 102
+17AA383D_20210811_A1_diag.bin = 102
+
+;;[CONF_0105.Tunings.CopyFiles]
+17AA3865_20220111_A0.bin = 105
+17AA3865_20220111_A0_cal.bin = 105
+17AA3865_20220111_A0_diag.bin = 105
+17AA3865_20220111_A1.bin = 105
+17AA3865_20220111_A1_cal.bin = 105
+17AA3865_20220111_A1_diag.bin = 105
+
+;;[CONF_0106.Tunings.CopyFiles]
+17AA3866_20220111_A0.bin = 106
+17AA3866_20220111_A0_cal.bin = 106
+17AA3866_20220111_A0_diag.bin = 106
+17AA3866_20220111_A1.bin = 106
+17AA3866_20220111_A1_cal.bin = 106
+17AA3866_20220111_A1_diag.bin = 106
+
+;;[CONF_0107.Tunings.CopyFiles]
+17AA3845_20220422_A0.bin = 107
+17AA3845_20220422_A0_cal.bin = 107
+17AA3845_20220422_A0_diag.bin = 107
+17AA3845_20220422_A1.bin = 107
+17AA3845_20220422_A1_cal.bin = 107
+17AA3845_20220422_A1_diag.bin = 107
+
+;;[CONF_0108.Tunings.CopyFiles]
+17AA3846_20220211_A0.bin = 108
+17AA3846_20220211_A0_cal.bin = 108
+17AA3846_20220211_A0_diag.bin = 108
+17AA3846_20220211_A1.bin = 108
+17AA3846_20220211_A1_cal.bin = 108
+17AA3846_20220211_A1_diag.bin = 108
+
+;;[CONF_0121.Tunings.CopyFiles]
+17AA22F1_20220311_A0.bin = 121
+17AA22F1_20220311_A0_cal.bin = 121
+17AA22F1_20220311_A0_diag.bin = 121
+17AA22F1_20220311_A0_autocal.bin = 121
+17AA22F1_20220311_A1.bin = 121
+17AA22F1_20220311_A1_cal.bin = 121
+17AA22F1_20220311_A1_diag.bin = 121
+17AA22F1_20220311_A1_autocal.bin = 121
+
+;;[CONF_0122.Tunings.CopyFiles]
+17AA22F2_20220311_A0.bin = 122
+17AA22F2_20220311_A0_cal.bin = 122
+17AA22F2_20220311_A0_diag.bin = 122
+17AA22F2_20220311_A0_autocal.bin = 122
+17AA22F2_20220311_A1.bin = 122
+17AA22F2_20220311_A1_cal.bin = 122
+17AA22F2_20220311_A1_diag.bin = 122
+17AA22F2_20220311_A1_autocal.bin = 122
+
+;;[CONF_0130.Tunings.CopyFiles]
+17AA386F_20220311_A0.bin = 130
+17AA386F_20220311_A1.bin = 130
+17AA386F_20220311_cal.bin = 130
+17AA386F_20220311_diag.bin = 130
+
+;;[CONF_0131.Tunings.CopyFiles]
+17AA3874_20220311_A0.bin = 131
+17AA3874_20220311_A1.bin = 131
+17AA3874_20220311_cal.bin = 131
+17AA3874_20220311_diag.bin = 131
+
+;;[CONF_0132.Tunings.CopyFiles]
+17AA386E_20211209_V0_A0.bin = 132
+17AA386E_20211209_V0_A01_cal.bin = 132
+17AA386E_20211209_V0_A01_diag.bin = 132
+17AA386E_20211209_V0_A1.bin = 132
+17AA386E_20211209_V1_A0.bin = 132
+17AA386E_20211209_V1_A01_cal.bin = 132
+17AA386E_20211209_V1_A01_diag.bin = 132
+17AA386E_20211209_V1_A1.bin = 132
+
+;;[CONF_0150.Tunings.CopyFiles]
+17AA2316_20221118_V0_A0.bin = 150
+17AA2316_20221118_V0_A0_cal.bin = 150
+17AA2316_20221118_V0_A0_diag.bin = 150
+17AA2316_20221028_V0_A0_autocal.bin = 150
+17AA2316_20221118_V0_A1.bin = 150
+17AA2316_20221118_V0_A1_cal.bin = 150
+17AA2316_20221118_V0_A1_diag.bin = 150
+17AA2316_20221028_V0_A1_autocal.bin = 150
+17AA2316_20221118_V1_A0.bin = 150
+17AA2316_20221118_V1_A0_cal.bin = 150
+17AA2316_20221118_V1_A0_diag.bin = 150
+17AA2316_20221028_V1_A0_autocal.bin = 150
+17AA2316_20221118_V1_A1.bin = 150
+17AA2316_20221118_V1_A1_cal.bin = 150
+17AA2316_20221118_V1_A1_diag.bin = 150
+17AA2316_20221028_V1_A1_autocal.bin = 150
+
+;;[CONF_0226.Tunings.CopyFiles]
+17AA38A9_20221111_V0_A0.bin = 226
+17AA38A9_20221111_V0_A1.bin = 226
+17AA38A9_20221111_V0_cal.bin = 226
+17AA38A9_20221111_V0_diag.bin = 226
+17AA38AB_20221111_V1_A0.bin = 226
+17AA38AB_20221111_V1_A0_cal.bin = 226
+17AA38AB_20221111_V1_A0_diag.bin = 226
+17AA38AB_20221111_V1_A1.bin = 226
+17AA38AB_20221111_V1_A1_cal.bin = 226
+17AA38AB_20221111_V1_A1_diag.bin = 226
+
+;;[CONF_0235.Tunings.CopyFiles]
+17AA38B2_20221118.bin = 235
+17AA38B2_20221118_cal.bin = 235
+17AA38B2_20221118_diag.bin = 235
+
+[DestinationDirs]
+DefaultDestDir = 11,csaudio				; \system32\csaudio
+
+; ================= Models section =====================
+
+[Manufacturer]
+%MfgName%=CirrusSpbAmp, NTamd64
+
+[CirrusSpbAmp.NTamd64]
+;; Lenovo models
+%CirrusSpeakerAmp% = CONF_0100, ACPI\VEN_CLSA&DEV_0100						; Y760-AMD
+%CirrusSpeakerAmp% = CONF_0101, ACPI\VEN_CLSA&DEV_0101						; Y760-TGL
+%CirrusSpeakerAmp% = CONF_0102, ACPI\VEN_CLSA&DEV_0102						; S760 (see LENOVO-1204)
+%CirrusSpeakerAmp% = CONF_0105, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA3865		; Thinkpad 13 (see LENOVO-1337)
+%CirrusSpeakerAmp% = CONF_0106, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA3866		; Thinkpad 13 (see LENOVO-1337)
+%CirrusSpeakerAmp% = CONF_0107, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA3845		; TBP173 (see LENOVO-1418)
+%CirrusSpeakerAmp% = CONF_0108, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA3846		; TBP173 (see LENOVO-1418)
+%CirrusSpeakerAmp% = CONF_0121, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA22F1		; Z13 Pegasus (see LENOVO-1295)
+%CirrusSpeakerAmp% = CONF_0122, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA22F2		; Z16 Medusa (see LENOVO-1296)
+%CirrusSpeakerAmp% = CONF_0122, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA22F3		; Z16 Medusa-dGPU (see LENOVO-1296)
+%CirrusSpeakerAmp% = CONF_0130, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA386F		; Y770 (see LENOVO-1402)
+%CirrusSpeakerAmp% = CONF_0131, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA3874		; Y770 (see LENOVO-1402)
+%CirrusSpeakerAmp% = CONF_0132, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA386E		; Y770S(I+N) (see LENOVO-1408)
+%CirrusSpeakerAmp% = CONF_0133, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA3877		; Y770S(A+A) (see LENOVO-1439)
+%CirrusSpeakerAmp% = CONF_0134, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA3878		; Y770S(A+A) (see LENOVO-1439)
+%CirrusSpeakerAmp% = CONF_0135, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA1234		; Y770S-14" (see LENOVO-1429)
+%CirrusSpeakerAmp% = CONF_0135, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA1A01		; Y770S-14" (see LENOVO-1429)
+%CirrusSpeakerAmp% = CONF_0150, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA2316		; Cheetah-3 (see LENOVO-1509)
+%CirrusSpeakerAmp% = CONF_0150, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA2317		; Cheetah-3 (see LENOVO-1509)
+;;Z13/Z16 Gen2 (see LENOVO-1533)
+%CirrusSpeakerAmp% = CONF_0121, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA2318		; Z13 Pegasus Gen2
+%CirrusSpeakerAmp% = CONF_0122, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA2319		; Z16 Medusa Gen2
+%CirrusSpeakerAmp% = CONF_0122, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA231A		; Z16 Medusa-dGPU Gen2
+;;Thinkbook 16P (see LENOVO-1547)
+%CirrusSpeakerAmp% = CONF_0226, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38AB		; Thinkbook 16P
+%CirrusSpeakerAmp% = CONF_0226, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38A9		; Thinkbook 16P
+;;Thinkbook 13 GEN3 (see LENOVO-1551)
+%CirrusSpeakerAmp% = CONF_0230, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38AD		; Thinkbook 13 GEN3
+%CirrusSpeakerAmp% = CONF_0230, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38B0		; Thinkbook 13 GEN3
+%CirrusSpeakerAmp% = CONF_0235, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38B2		; Thinkbook Plus G4
+;;Y780S(Intel) (see LENOVO-1553)
+%CirrusSpeakerAmp% = CONF_0240, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38B4		; Y780S(Intel)
+%CirrusSpeakerAmp% = CONF_0240, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38B5		; Y780S(Intel)
+;;Y780S(AMD) (see LENOVO-1555)
+%CirrusSpeakerAmp% = CONF_0240, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38B6		; Y780S(AMD)
+%CirrusSpeakerAmp% = CONF_0240, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38B7		; Y780S(AMD)
+;;Thinkbook 14P (see LENOVO-1569)
+%CirrusSpeakerAmp% = CONF_0225, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38C0		; Thinkbook 14P  (see LENOVO-1559)
+%CirrusSpeakerAmp% = CONF_0225, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA38C1		; Thinkbook 14P  (see LENOVO-1559)
+;;Thinkbook 13x Gen4 (see LENOVO-1584)
+%CirrusSpeakerAmp% = CONF_0245, ACPI\VEN_CSC&DEV_3551&SUBSYS_17AA386B		; Thinkbook 13x Gen4  (see LENOVO-1517)
+
+; ================= DDInstall sections =====================
+
+[CONF_0100.NT]
+AddReg=CONF_0100.Settings.AddReg, CONF_0100.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.39.0.Firmware.AddReg, CONF_0100.Tunings.AddReg
+CopyFiles=PB6.39.0.Firmware.CopyFiles, CONF_0100.Tunings.CopyFiles
+
+[CONF_0101.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0100.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.47.0.Firmware.AddReg, CONF_0101.Tunings.AddReg
+CopyFiles=PB6.47.0.Firmware.CopyFiles, CONF_0101.Tunings.CopyFiles
+
+[CONF_0102.NT]
+AddReg=CONF_0102.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.47.0.Firmware.AddReg, PB6.47.0.Tunings.AddReg, CONF_0102.Tunings.AddReg, 2_SPK_DefaultGain.AddReg
+CopyFiles=PB6.47.0.Firmware.CopyFiles, PB6.47.0.Tunings.CopyFiles, CONF_0102.Tunings.CopyFiles
+
+[CONF_0105.NT]
+AddReg=CONF_0102.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.63.0.Firmware.AddReg, PB6.63.0.Tunings.AddReg, CONF_0105.Tunings.AddReg, 2_SPK_DefaultGain.AddReg
+CopyFiles=PB6.63.0.Firmware.CopyFiles, PB6.63.0.Tunings.CopyFiles, CONF_0105.Tunings.CopyFiles
+
+[CONF_0106.NT]
+AddReg=CONF_0102.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.63.0.Firmware.AddReg, PB6.63.0.Tunings.AddReg, CONF_0106.Tunings.AddReg, 2_SPK_DefaultGain.AddReg
+CopyFiles=PB6.63.0.Firmware.CopyFiles, PB6.63.0.Tunings.CopyFiles, CONF_0106.Tunings.CopyFiles
+
+[CONF_0107.NT]
+AddReg=CONF_0102.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, CONF_0107.Tunings.AddReg, 2_SPK_DefaultGain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, CONF_0107.Tunings.CopyFiles
+
+[CONF_0108.NT]
+AddReg=CONF_0102.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, CONF_0108.Tunings.AddReg, 2_SPK_DefaultGain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, CONF_0108.Tunings.CopyFiles
+
+[CONF_0121.NT]
+AddReg=CONF_0120.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, PB6.76.0.AddReg, CONF_0121.Tunings.AddReg, 2_SPK_16.5_dB_Gain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, PB6.76.0.CopyFiles, CONF_0121.Tunings.CopyFiles
+
+[CONF_0122.NT]
+AddReg=CONF_0120.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, PB6.76.0.AddReg, CONF_0122.Tunings.AddReg, 2_SPK_16.5_dB_Gain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, PB6.76.0.CopyFiles, CONF_0122.Tunings.CopyFiles
+
+[CONF_0130.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, CONF_0130.Tunings.AddReg, 2_SPK_DefaultGain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, CONF_0130.Tunings.CopyFiles
+
+[CONF_0131.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, CONF_0131.Tunings.AddReg, 2_SPK_DefaultGain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, CONF_0131.Tunings.CopyFiles
+
+[CONF_0132.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0100.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, CONF_0132.Tunings.AddReg, 2_SPK_2_VEN_DefaultGain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, CONF_0132.Tunings.CopyFiles
+
+[CONF_0133.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, CONF_0133.Tunings.AddReg, 2_SPK_DefaultGain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, CONF_0132.Tunings.CopyFiles
+
+[CONF_0134.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, CONF_0134.Tunings.AddReg, 2_SPK_DefaultGain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, CONF_0132.Tunings.CopyFiles
+
+[CONF_0135.NT]
+AddReg=CONF_0120.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles
+
+[CONF_0150.NT]
+AddReg=CONF_0150.Settings.AddReg, CONF_0150.Config.AddReg, L51_2_VBST.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, PB6.76.0.AddReg, CONF_0150.Tunings.AddReg, 2_SPK_2_VEN_DefaultGain_Without_Diag.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, PB6.76.0.CopyFiles, CONF_0150.Tunings.CopyFiles
+
+[CONF_0225.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0100.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles
+
+[CONF_0226.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0100.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, CONF_0226.Tunings.AddReg, 2_SPK_2_VEN_DefaultGain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, CONF_0226.Tunings.CopyFiles
+
+[CONF_0230.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0100.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.63.0.Firmware.AddReg, PB6.63.0.Tunings.AddReg, CONF_0230.Tunings.AddReg, 2_SPK_2_VEN_DefaultGain.AddReg
+CopyFiles=PB6.63.0.Firmware.CopyFiles, PB6.63.0.Tunings.CopyFiles, CONF_0105.Tunings.CopyFiles, CONF_0106.Tunings.CopyFiles
+
+[CONF_0235.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0102.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg, CONF_0235.Tunings.AddReg, 2_SPK_10.5_dB_Gain.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles, CONF_0235.Tunings.CopyFiles
+
+[CONF_0240.NT]
+AddReg=CONF_0101.Settings.AddReg, CONF_0150.Config.AddReg, L51_2_VSPK.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles
+
+[CONF_0245.NT]
+AddReg=CONF_0245.Settings.AddReg, CONF_0245.Config.AddReg, L51_4_VBST.Init.AddReg
+AddReg=PB6.61.1.Firmware.AddReg, PB6.61.1.Tunings.AddReg
+CopyFiles=PB6.61.1.Firmware.CopyFiles, PB6.61.1.Tunings.CopyFiles
+
+; ================= Settings/Config/Init sections =====================
+
+[CONF_0100.Settings.AddReg]
+HKR,Settings,ForceAmpSafeState,		%REG_DWORD%,	1
+
+[CONF_0101.Settings.AddReg]
+HKR,Settings,ExternalVspkControl,	%REG_BINARY%,	01,01
+
+[CONF_0102.Settings.AddReg]
+HKR,Settings,ExternalVspkControl,	%REG_BINARY%,	01,00
+
+[CONF_0120.Settings.AddReg]
+HKR,Settings,DefaultChannelMap,		%REG_BINARY%,	01,00
+HKR,Settings,ExternalVspkControl,	%REG_BINARY%,	01,00
+HKR,Settings,EnableAutoCal,			%REG_DWORD%,	1
+
+[CONF_0150.Settings.AddReg]
+HKR,Settings,DefaultChannelMap,		%REG_BINARY%,	01,00
+HKR,Settings,EnableAutoCal,			%REG_DWORD%,	1
+
+[CONF_0245.Settings.AddReg]
+HKR,Settings,DefaultChannelMap,		%REG_BINARY%,	00,00,01,01
+
+[CONF_0100.Config.AddReg]
+HKR,Config,0,						%REG_DWORD%,	0x12111000
+HKR,Config,1,						%REG_DWORD%,	0x12111000
+
+[CONF_0102.Config.AddReg]
+HKR,Config,0,						%REG_DWORD%,	0x00111000
+HKR,Config,1,						%REG_DWORD%,	0x00111000
+
+[CONF_0150.Config.AddReg]
+HKR,Config,0,						%REG_DWORD%,	0x11121000
+HKR,Config,1,						%REG_DWORD%,	0x11121000
+
+[CONF_0245.Config.AddReg]
+HKR,Config,0,						%REG_DWORD%,	0x12111000
+HKR,Config,1,						%REG_DWORD%,	0x12111000
+HKR,Config,2,						%REG_DWORD%,	0x12111000
+HKR,Config,3,						%REG_DWORD%,	0x12111000
+
+[L51_4_VSPK.Init.AddReg]
+;; ASP_TX1_EN = 0, ASP_TX_WL = 16 bits, BST_EN = 00, DSP1RX5_SRC = VBSTMON
+HKR,InitSequence,,					%REG_BINARY%,	\
+  0f,0b,01,00,00,2c,04,00,00,04,20,\
+		03,00,00,2c,04,00,00,04,30,00,00,00,03,00,00,00,03,\
+		05,00,00,48,00,00,01,00,00,00,00,00,21,20,10,02,00,00,00,00,03,03,02,01,00,\
+		01,00,00,48,30,00,00,00,10,\
+		01,00,00,48,40,00,00,00,18,\
+		01,00,00,4c,00,00,00,00,32,\
+		04,00,00,4c,20,00,00,00,18,00,00,00,19,00,00,00,28,00,00,00,29,\
+		05,00,00,4c,40,00,00,00,08,00,00,00,08,00,00,00,18,00,00,00,19,00,00,00,29,\
+		01,00,00,20,18,00,00,30,01,\
+		01,00,01,00,10,ff,ff,ff,ff,\
+		01,00,01,01,10,7f,fd,fe,3f
+
+[L51_2_VSPK.Init.AddReg]
+;; ASP_TX1_EN = 1, ASP_TX_WL = 24 bits, BST_EN = 00, DSP1RX5_SRC = VBSTMON
+HKR,InitSequence,,					%REG_BINARY%,	\
+  03,03,01,00,00,2c,04,00,00,04,20,\
+		03,00,00,2c,04,00,00,04,30,00,00,00,03,00,00,00,03,\
+		04,00,00,48,00,00,01,00,01,00,00,00,21,20,20,02,00,00,00,00,03,\
+  01,01,01,00,00,48,10,06,04,02,00,\
+  02,01,01,00,00,48,10,07,05,03,01,\
+  03,08,01,00,00,48,30,00,00,00,18,\
+		01,00,00,48,40,00,00,00,18,\
+		01,00,00,4c,00,00,00,00,32,\
+		04,00,00,4c,20,00,00,00,18,00,00,00,19,00,00,00,28,00,00,00,29,\
+		05,00,00,4c,40,00,00,00,08,00,00,00,08,00,00,00,18,00,00,00,19,00,00,00,29,\
+		01,00,00,20,18,00,00,30,01,\
+		01,00,01,00,10,ff,ff,ff,ff,\
+		01,00,01,01,10,7f,fd,fe,3f
+
+[L51_2_VBST.Init.AddReg]
+;; ASP_TX1_EN = 1, ASP_TX_WL = 24 bits, BST_EN = 10, DSP1RX5_SRC = VPMON
+HKR,InitSequence,,					%REG_BINARY%,	\
+  03,03,01,00,00,2c,04,00,00,04,20,\
+		03,00,00,2c,04,00,00,04,30,00,00,00,03,00,00,00,03,\
+		04,00,00,48,00,00,01,00,01,00,00,00,21,20,20,02,00,00,00,00,03,\
+  01,01,01,00,00,48,10,06,04,02,00,\
+  02,01,01,00,00,48,10,07,05,03,01,\
+  03,08,01,00,00,48,30,00,00,00,18,\
+		01,00,00,48,40,00,00,00,18,\
+		01,00,00,4c,00,00,00,00,32,\
+		04,00,00,4c,20,00,00,00,18,00,00,00,19,00,00,00,28,00,00,00,29,\
+		05,00,00,4c,40,00,00,00,08,00,00,00,08,00,00,00,18,00,00,00,19,00,00,00,28,\
+		01,00,00,20,18,00,00,30,21,\
+		01,00,01,00,10,ff,ff,ff,ff,\
+		01,00,01,01,10,7f,fd,fe,3f
+
+[L51_4_VBST.Init.AddReg]
+;; ASP_TX1_EN = 0, ASP_TX_WL = 16 bits, BST_EN = 10, DSP1RX5_SRC = VPMON
+HKR,InitSequence,,					%REG_BINARY%,	\
+  0f,0b,01,00,00,2c,04,00,00,04,20,\
+		03,00,00,2c,04,00,00,04,30,00,00,00,03,00,00,00,03,\
+		05,00,00,48,00,00,01,00,00,00,00,00,21,20,10,02,00,00,00,00,03,03,02,01,00,\
+		01,00,00,48,30,00,00,00,10,\
+		01,00,00,48,40,00,00,00,18,\
+		01,00,00,4c,00,00,00,00,32,\
+		04,00,00,4c,20,00,00,00,18,00,00,00,19,00,00,00,28,00,00,00,29,\
+		05,00,00,4c,40,00,00,00,08,00,00,00,08,00,00,00,18,00,00,00,19,00,00,00,28,\
+		01,00,00,20,18,00,00,30,21,\
+		01,00,01,00,10,ff,ff,ff,ff,\
+		01,00,01,01,10,7f,fd,fe,3f
+
+; ================= Firmware and Tunings sections =====================
+
+[PB6.39.0.Firmware.CopyFiles]
+halo_cspl_RAM_revB2_29.41.0.wmfw
+halo_cspl_RAM_diag_revB2_29.41.0.wmfw
+
+[PB6.39.0.Firmware.AddReg]
+HKR,Firmware\B2\1,,					%REG_SZ%,		halo_cspl_RAM_revB2_29.41.0.wmfw
+HKR,Firmware\B2\2,,					%REG_SZ%,		halo_cspl_RAM_diag_revB2_29.41.0.wmfw
+
+[PB6.39.0.Tunings.CopyFiles]
+Cal_and_Diag_prince_revB2_left_cal.bin
+Calibration_prince_revB2_left_cal.bin
+Enhance_Protect_Lite_Mono_prince_revB2_left.bin
+Protect_Lite_prince_revB2_left.bin
+top_passthrough_prince_revB2_full.bin
+
+[PB6.39.0.Tunings.AddReg]
+HKR,Tunings\B2\1,,					%REG_SZ%,		Enhance_Prot_Mono_prince_revB2_left.bin
+HKR,Tunings\B2\2,,					%REG_SZ%,		Calibration_prince_revB2_left_cal.bin
+HKR,Tunings\B2\3,,					%REG_SZ%,		Cal_and_Diag_prince_revB2_left_cal.bin
+HKR,Tunings\B2\4,,					%REG_SZ%,		Protect_Lite_prince_revB2_left.bin
+HKR,Tunings\B2\5,,					%REG_SZ%,		top_passthrough_prince_revB2_full.bin
+
+HKR,Tunings\B2\1,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\5,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[PB6.47.0.Firmware.CopyFiles]
+halo_cspl_RAM_revB2_29.49.0.wmfw
+halo_cspl_RAM_diag_revB2_29.49.0.wmfw
+
+[PB6.47.0.Firmware.AddReg]
+HKR,Firmware\B2\1,,					%REG_SZ%,		halo_cspl_RAM_revB2_29.49.0.wmfw
+HKR,Firmware\B2\2,,					%REG_SZ%,		halo_cspl_RAM_diag_revB2_29.49.0.wmfw
+
+[PB6.47.0.Tunings.CopyFiles]
+Cal_and_Diag_prince_revB2_48K_left_cal.bin
+Calibration_prince_revB2_48K_left_cal.bin
+Enhance_Prot_Mono_prince_revB2_48K_left.bin
+Protect_Lite_prince_revB2_48K_left.bin
+top_passthrough_prince_revB2_48K_full.bin
+
+[PB6.47.0.Tunings.AddReg]
+HKR,Tunings\B2\1,,					%REG_SZ%,		Enhance_Prot_Mono_prince_revB2_48K_left.bin
+HKR,Tunings\B2\2,,					%REG_SZ%,		Calibration_prince_revB2_48K_left_cal.bin
+HKR,Tunings\B2\3,,					%REG_SZ%,		Cal_and_Diag_prince_revB2_48K_left_cal.bin
+HKR,Tunings\B2\4,,					%REG_SZ%,		Protect_Lite_prince_revB2_48K_left.bin
+HKR,Tunings\B2\5,,					%REG_SZ%,		top_passthrough_prince_revB2_48K_full.bin
+
+HKR,Tunings\B2\1,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\5,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[PB6.61.1.Firmware.CopyFiles]
+halo_cspl_RAM_revB2_29.63.1.wmfw
+halo_cspl_RAM_diag_revB2_29.63.1.wmfw
+
+[PB6.61.1.Firmware.AddReg]
+HKR,Firmware\B2\1,,					%REG_SZ%,		halo_cspl_RAM_revB2_29.63.1.wmfw
+HKR,Firmware\B2\2,,					%REG_SZ%,		halo_cspl_RAM_diag_revB2_29.63.1.wmfw
+
+[PB6.61.1.Tunings.CopyFiles]
+Cal_and_Diag_CS35L41B_48K_29.63.1_left_cal.bin
+Calibration_CS35L41B_48K_29.63.1_left_cal.bin
+Enhance_Prot_Mono_CS35L41B_48K_29.63.1_left.bin
+Protect_Lite_CS35L41B_48K_29.63.1_left.bin
+top_passthrough_CS35L41B_48K_29.63.1_full.bin
+
+[PB6.61.1.Tunings.AddReg]
+HKR,Tunings\B2\1,,					%REG_SZ%,		Enhance_Prot_Mono_CS35L41B_48K_29.63.1_left.bin
+HKR,Tunings\B2\2,,					%REG_SZ%,		Calibration_CS35L41B_48K_29.63.1_left_cal.bin
+HKR,Tunings\B2\3,,					%REG_SZ%,		Cal_and_Diag_CS35L41B_48K_29.63.1_left_cal.bin
+HKR,Tunings\B2\4,,					%REG_SZ%,		Protect_Lite_CS35L41B_48K_29.63.1_left.bin
+HKR,Tunings\B2\5,,					%REG_SZ%,		top_passthrough_CS35L41B_48K_29.63.1_full.bin
+
+HKR,Tunings\B2\1,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\5,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[PB6.63.0.Firmware.CopyFiles]
+halo_cspl_RAM_revB2_29.65.0.wmfw
+halo_cspl_RAM_diag_revB2_29.65.0.wmfw
+
+[PB6.63.0.Firmware.AddReg]
+HKR,Firmware\B2\1,,					%REG_SZ%,		halo_cspl_RAM_revB2_29.65.0.wmfw
+HKR,Firmware\B2\2,,					%REG_SZ%,		halo_cspl_RAM_diag_revB2_29.65.0.wmfw
+
+[PB6.63.0.Tunings.CopyFiles]
+Cal_and_Diag_CS35L41B_48K_29.65.0_left_cal.bin
+Calibration_CS35L41B_48K_29.65.0_left_cal.bin
+Enhance_Prot_Mono_CS35L41B_48K_29.65.0_left.bin
+Protect_Lite_CS35L41B_48K_29.65.0_left.bin
+top_passthrough_CS35L41B_48K_29.65.0_full.bin
+
+[PB6.63.0.Tunings.AddReg]
+HKR,Tunings\B2\1,,					%REG_SZ%,		Enhance_Prot_Mono_CS35L41B_48K_29.65.0_left.bin
+HKR,Tunings\B2\2,,					%REG_SZ%,		Calibration_CS35L41B_48K_29.65.0_left_cal.bin
+HKR,Tunings\B2\3,,					%REG_SZ%,		Cal_and_Diag_CS35L41B_48K_29.65.0_left_cal.bin
+HKR,Tunings\B2\4,,					%REG_SZ%,		Protect_Lite_CS35L41B_48K_29.65.0_left.bin
+HKR,Tunings\B2\5,,					%REG_SZ%,		top_passthrough_CS35L41B_48K_29.65.0_full.bin
+
+HKR,Tunings\B2\1,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\5,Gain,				%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[PB6.76.0.CopyFiles]
+halo_cspl_RAM_diag_revB2_29.78.0.wmfw
+Cal_and_Diag_48K_29.78.0_left_cal.bin
+
+[PB6.76.0.AddReg]
+HKR,Firmware\B2\2,,					%REG_SZ%,		halo_cspl_RAM_diag_revB2_29.78.0.wmfw
+HKR,Tunings\B2\3,,					%REG_SZ%,		Cal_and_Diag_48K_29.78.0_left_cal.bin
+
+[2_SPK_DefaultGain.AddReg]
+HKR,Tunings\B2\2\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[2_SPK_10.5_dB_Gain.AddReg]
+HKR,Tunings\B2\2\0\0,Gain,			%REG_DWORD%,	0x000A8000		; +10.5 dB
+HKR,Tunings\B2\2\0\1,Gain,			%REG_DWORD%,	0x000A8000		; +10.5 dB
+HKR,Tunings\B2\3\0\0,Gain,			%REG_DWORD%,	0x000A8000		; +10.5 dB
+HKR,Tunings\B2\3\0\1,Gain,			%REG_DWORD%,	0x000A8000		; +10.5 dB
+HKR,Tunings\B2\4\0\0,Gain,			%REG_DWORD%,	0x000A8000		; +10.5 dB
+HKR,Tunings\B2\4\0\1,Gain,			%REG_DWORD%,	0x000A8000		; +10.5 dB
+
+[2_SPK_16.5_dB_Gain.AddReg]
+HKR,Tunings\B2\2\0\0,Gain,			%REG_DWORD%,	0x00108000		; +16.5 dB
+HKR,Tunings\B2\2\0\1,Gain,			%REG_DWORD%,	0x00108000		; +16.5 dB
+HKR,Tunings\B2\4\0\0,Gain,			%REG_DWORD%,	0x00108000		; +16.5 dB
+HKR,Tunings\B2\4\0\1,Gain,			%REG_DWORD%,	0x00108000		; +16.5 dB
+
+[2_SPK_2_VEN_DefaultGain.AddReg]
+HKR,Tunings\B2\2\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2\1\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2\1\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3\1\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3\1\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\1\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\1\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+
+
+[2_SPK_2_VEN_DefaultGain_Without_Diag.AddReg]
+HKR,Tunings\B2\2\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2\1\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2\1\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\1\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\1\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[CONF_0100.Tunings.CopyFiles]
+Y760_Luxshare_Cal_Only_Impedance_LS639_8th_Oct_Y21.bin
+Y760_Luxshare_Cal_F0_Impedance_LS639_1216.bin
+Y760_Veco_Cal_Only_Impedance_LS639_8th_Oct_Y21.bin
+Y760_Veco_Cal_F0_Impedance_PB639_1120.bin
+Lenovo_Y760_Luxshare_Left_Spk_Tuning_LS639_0905.bin
+Lenovo_Y760_Luxshare_Right_Spk_Tuning_LS639_0905.bin
+Lenovo_Y760_Veco_Left_Spk_Tuning_LS639_0905.bin
+Lenovo_Y760_Veco_Right_Spk_Tuning_LS639_0905.bin
+
+[CONF_0100.Tunings.AddReg]
+HKR,Tunings\B2\2\0,,				%REG_SZ%,		Y760_Luxshare_Cal_Only_Impedance_LS639_8th_Oct_Y21.bin
+HKR,Tunings\B2\3\0,,				%REG_SZ%,		Y760_Luxshare_Cal_F0_Impedance_LS639_1216.bin
+HKR,Tunings\B2\2\1,,				%REG_SZ%,		Y760_Veco_Cal_Only_Impedance_LS639_8th_Oct_Y21.bin
+HKR,Tunings\B2\3\1,,				%REG_SZ%,		Y760_Veco_Cal_F0_Impedance_PB639_1120.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		Lenovo_Y760_Luxshare_Left_Spk_Tuning_LS639_0905.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		Lenovo_Y760_Luxshare_Right_Spk_Tuning_LS639_0905.bin
+HKR,Tunings\B2\4\1\0,,				%REG_SZ%,		Lenovo_Y760_Veco_Left_Spk_Tuning_LS639_0905.bin
+HKR,Tunings\B2\4\1\1,,				%REG_SZ%,		Lenovo_Y760_Veco_Right_Spk_Tuning_LS639_0905.bin
+
+HKR,Tunings\B2\2\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\3\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\1\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\1\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[CONF_0101.Tunings.CopyFiles]
+Y760_Luxshare_Cal_Only_Impedance_LS647_8th_Oct_Y21.bin
+Y760_Veco_Cal_Only_Impedance_LS647_8th_Oct_Y21.bin
+Lenovo_Y760_Luxshare_Left_Spk_Tuning_LS647_0905.bin
+Lenovo_Y760_Luxshare_Right_Spk_Tuning_LS647_0905.bin
+Lenovo_Y760_Veco_Left_Spk_Tuning_LS647_0905.bin
+Lenovo_Y760_Veco_Right_Spk_Tuning_LS647_0905.bin
+
+[CONF_0101.Tunings.AddReg]
+HKR,Tunings\B2\2\0,,				%REG_SZ%,		Y760_Luxshare_Cal_Only_Impedance_LS647_8th_Oct_Y21.bin
+HKR,Tunings\B2\2\1,,				%REG_SZ%,		Y760_Veco_Cal_Only_Impedance_LS647_8th_Oct_Y21.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		Lenovo_Y760_Luxshare_Left_Spk_Tuning_LS647_0905.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		Lenovo_Y760_Luxshare_Right_Spk_Tuning_LS647_0905.bin
+HKR,Tunings\B2\4\1\0,,				%REG_SZ%,		Lenovo_Y760_Veco_Left_Spk_Tuning_LS647_0905.bin
+HKR,Tunings\B2\4\1\1,,				%REG_SZ%,		Lenovo_Y760_Veco_Right_Spk_Tuning_LS647_0905.bin
+
+HKR,Tunings\B2\2\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\2\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\1\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\4\1\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[CONF_0102.Tunings.CopyFiles]
+17AA383D_20210811_A0.bin
+17AA383D_20210811_A0_cal.bin
+17AA383D_20210811_A0_diag.bin
+17AA383D_20210811_A1.bin
+17AA383D_20210811_A1_cal.bin
+17AA383D_20210811_A1_diag.bin
+
+[CONF_0102.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA383D_20210811_A0_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA383D_20210811_A1_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA383D_20210811_A0_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA383D_20210811_A1_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA383D_20210811_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA383D_20210811_A1.bin
+
+[CONF_0105.Tunings.CopyFiles]
+17AA3865_20220111_A0.bin
+17AA3865_20220111_A0_cal.bin
+17AA3865_20220111_A0_diag.bin
+17AA3865_20220111_A1.bin
+17AA3865_20220111_A1_cal.bin
+17AA3865_20220111_A1_diag.bin
+
+[CONF_0105.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA3865_20220111_A0_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA3865_20220111_A1_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA3865_20220111_A0_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA3865_20220111_A1_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA3865_20220111_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA3865_20220111_A1.bin
+
+[CONF_0106.Tunings.CopyFiles]
+17AA3866_20220111_A0.bin
+17AA3866_20220111_A0_cal.bin
+17AA3866_20220111_A0_diag.bin
+17AA3866_20220111_A1.bin
+17AA3866_20220111_A1_cal.bin
+17AA3866_20220111_A1_diag.bin
+
+[CONF_0106.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA3866_20220111_A0_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA3866_20220111_A1_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA3866_20220111_A0_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA3866_20220111_A1_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA3866_20220111_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA3866_20220111_A1.bin
+
+[CONF_0107.Tunings.CopyFiles]
+17AA3845_20220422_A0.bin
+17AA3845_20220422_A0_cal.bin
+17AA3845_20220422_A0_diag.bin
+17AA3845_20220422_A1.bin
+17AA3845_20220422_A1_cal.bin
+17AA3845_20220422_A1_diag.bin
+
+[CONF_0107.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA3845_20220422_A0_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA3845_20220422_A1_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA3845_20220422_A0_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA3845_20220422_A1_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA3845_20220422_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA3845_20220422_A1.bin
+
+[CONF_0108.Tunings.CopyFiles]
+17AA3846_20220211_A0.bin
+17AA3846_20220211_A0_cal.bin
+17AA3846_20220211_A0_diag.bin
+17AA3846_20220211_A1.bin
+17AA3846_20220211_A1_cal.bin
+17AA3846_20220211_A1_diag.bin
+
+[CONF_0108.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA3846_20220211_A0_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA3846_20220211_A1_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA3846_20220211_A0_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA3846_20220211_A1_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA3846_20220211_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA3846_20220211_A1.bin
+
+[CONF_0121.Tunings.CopyFiles]
+17AA22F1_20220311_A0.bin
+17AA22F1_20220311_A0_cal.bin
+17AA22F1_20220311_A0_diag.bin
+17AA22F1_20220311_A0_autocal.bin
+17AA22F1_20220311_A1.bin
+17AA22F1_20220311_A1_cal.bin
+17AA22F1_20220311_A1_diag.bin
+17AA22F1_20220311_A1_autocal.bin
+
+[CONF_0121.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA22F1_20220311_A0_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA22F1_20220311_A1_cal.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA22F1_20220311_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA22F1_20220311_A1.bin
+HKR,Tunings\B2\7\0\0,,				%REG_SZ%,		17AA22F1_20220311_A0_autocal.bin
+HKR,Tunings\B2\7\0\1,,				%REG_SZ%,		17AA22F1_20220311_A1_autocal.bin
+
+HKR,Tunings\B2\7\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\7\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[CONF_0122.Tunings.CopyFiles]
+17AA22F2_20220311_A0.bin
+17AA22F2_20220311_A0_cal.bin
+17AA22F2_20220311_A0_diag.bin
+17AA22F2_20220311_A0_autocal.bin
+17AA22F2_20220311_A1.bin
+17AA22F2_20220311_A1_cal.bin
+17AA22F2_20220311_A1_diag.bin
+17AA22F2_20220311_A1_autocal.bin
+
+[CONF_0122.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA22F2_20220311_A0_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA22F2_20220311_A1_cal.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA22F2_20220311_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA22F2_20220311_A1.bin
+HKR,Tunings\B2\7\0\0,,				%REG_SZ%,		17AA22F2_20220311_A0_autocal.bin
+HKR,Tunings\B2\7\0\1,,				%REG_SZ%,		17AA22F2_20220311_A1_autocal.bin
+
+HKR,Tunings\B2\7\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\7\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[CONF_0130.Tunings.CopyFiles]
+17AA386F_20220311_A0.bin
+17AA386F_20220311_A1.bin
+17AA386F_20220311_cal.bin
+17AA386F_20220311_diag.bin
+
+[CONF_0130.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA386F_20220311_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA386F_20220311_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA386F_20220311_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA386F_20220311_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA386F_20220311_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA386F_20220311_A1.bin
+
+[CONF_0131.Tunings.CopyFiles]
+17AA3874_20220311_A0.bin
+17AA3874_20220311_A1.bin
+17AA3874_20220311_cal.bin
+17AA3874_20220311_diag.bin
+
+[CONF_0131.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA3874_20220311_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA3874_20220311_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA3874_20220311_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA3874_20220311_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA3874_20220311_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA3874_20220311_A1.bin
+
+[CONF_0132.Tunings.CopyFiles]
+17AA386E_20211209_V0_A0.bin
+17AA386E_20211209_V0_A01_cal.bin
+17AA386E_20211209_V0_A01_diag.bin
+17AA386E_20211209_V0_A1.bin
+17AA386E_20211209_V1_A0.bin
+17AA386E_20211209_V1_A01_cal.bin
+17AA386E_20211209_V1_A01_diag.bin
+17AA386E_20211209_V1_A1.bin
+
+[CONF_0132.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA386E_20211209_V0_A01_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA386E_20211209_V0_A01_cal.bin
+HKR,Tunings\B2\2\1\0,,				%REG_SZ%,		17AA386E_20211209_V1_A01_cal.bin
+HKR,Tunings\B2\2\1\1,,				%REG_SZ%,		17AA386E_20211209_V1_A01_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA386E_20211209_V0_A01_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA386E_20211209_V0_A01_diag.bin
+HKR,Tunings\B2\3\1\0,,				%REG_SZ%,		17AA386E_20211209_V1_A01_diag.bin
+HKR,Tunings\B2\3\1\1,,				%REG_SZ%,		17AA386E_20211209_V1_A01_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA386E_20211209_V0_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA386E_20211209_V0_A1.bin
+HKR,Tunings\B2\4\1\0,,				%REG_SZ%,		17AA386E_20211209_V1_A0.bin
+HKR,Tunings\B2\4\1\1,,				%REG_SZ%,		17AA386E_20211209_V1_A1.bin
+
+[CONF_0133.Tunings.AddReg]
+;; reuse tunings from Y770S(I+N) V0
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA386E_20211209_V0_A01_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA386E_20211209_V0_A01_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA386E_20211209_V0_A01_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA386E_20211209_V0_A01_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA386E_20211209_V0_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA386E_20211209_V0_A1.bin
+
+[CONF_0134.Tunings.AddReg]
+;; reuse tunings from Y770S(I+N) V1
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA386E_20211209_V1_A01_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA386E_20211209_V1_A01_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA386E_20211209_V1_A01_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA386E_20211209_V1_A01_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA386E_20211209_V1_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA386E_20211209_V1_A1.bin
+
+[CONF_0150.Tunings.CopyFiles]
+17AA2316_20221118_V0_A0.bin
+17AA2316_20221118_V0_A0_cal.bin
+17AA2316_20221118_V0_A0_diag.bin
+17AA2316_20221028_V0_A0_autocal.bin
+17AA2316_20221118_V0_A1.bin
+17AA2316_20221118_V0_A1_cal.bin
+17AA2316_20221118_V0_A1_diag.bin
+17AA2316_20221028_V0_A1_autocal.bin
+17AA2316_20221118_V1_A0.bin
+17AA2316_20221118_V1_A0_cal.bin
+17AA2316_20221118_V1_A0_diag.bin
+17AA2316_20221028_V1_A0_autocal.bin
+17AA2316_20221118_V1_A1.bin
+17AA2316_20221118_V1_A1_cal.bin
+17AA2316_20221118_V1_A1_diag.bin
+17AA2316_20221028_V1_A1_autocal.bin
+
+[CONF_0150.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA2316_20221118_V0_A0_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA2316_20221118_V0_A1_cal.bin
+HKR,Tunings\B2\2\1\0,,				%REG_SZ%,		17AA2316_20221118_V1_A0_cal.bin
+HKR,Tunings\B2\2\1\1,,				%REG_SZ%,		17AA2316_20221118_V1_A1_cal.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA2316_20221118_V0_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA2316_20221118_V0_A1.bin
+HKR,Tunings\B2\4\1\0,,				%REG_SZ%,		17AA2316_20221118_V1_A0.bin
+HKR,Tunings\B2\4\1\1,,				%REG_SZ%,		17AA2316_20221118_V1_A1.bin
+HKR,Tunings\B2\7\0\0,,				%REG_SZ%,		17AA2316_20221028_V0_A0_autocal.bin
+HKR,Tunings\B2\7\0\1,,				%REG_SZ%,		17AA2316_20221028_V0_A1_autocal.bin
+HKR,Tunings\B2\7\1\0,,				%REG_SZ%,		17AA2316_20221028_V1_A0_autocal.bin
+HKR,Tunings\B2\7\1\1,,				%REG_SZ%,		17AA2316_20221028_V1_A1_autocal.bin
+
+HKR,Tunings\B2\7\0\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\7\0\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\7\1\0,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+HKR,Tunings\B2\7\1\1,Gain,			%REG_DWORD%,	0x00118000		; +17.5 dB
+
+[CONF_0226.Tunings.CopyFiles]
+17AA38A9_20221111_V0_A0.bin
+17AA38A9_20221111_V0_A1.bin
+17AA38A9_20221111_V0_cal.bin
+17AA38A9_20221111_V0_diag.bin
+17AA38AB_20221111_V1_A0.bin
+17AA38AB_20221111_V1_A0_cal.bin
+17AA38AB_20221111_V1_A0_diag.bin
+17AA38AB_20221111_V1_A1.bin
+17AA38AB_20221111_V1_A1_cal.bin
+17AA38AB_20221111_V1_A1_diag.bin
+
+[CONF_0226.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA38A9_20221111_V0_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA38A9_20221111_V0_cal.bin
+HKR,Tunings\B2\2\1\0,,				%REG_SZ%,		17AA38AB_20221111_V1_A0_cal.bin
+HKR,Tunings\B2\2\1\1,,				%REG_SZ%,		17AA38AB_20221111_V1_A1_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA38A9_20221111_V0_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA38A9_20221111_V0_diag.bin
+HKR,Tunings\B2\3\1\0,,				%REG_SZ%,		17AA38AB_20221111_V1_A0_diag.bin
+HKR,Tunings\B2\3\1\1,,				%REG_SZ%,		17AA38AB_20221111_V1_A1_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA38A9_20221111_V0_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA38A9_20221111_V0_A1.bin
+HKR,Tunings\B2\4\1\0,,				%REG_SZ%,		17AA38AB_20221111_V1_A0.bin
+HKR,Tunings\B2\4\1\1,,				%REG_SZ%,		17AA38AB_20221111_V1_A1.bin
+
+[CONF_0230.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA3865_20220111_A0_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA3865_20220111_A1_cal.bin
+HKR,Tunings\B2\2\1\0,,				%REG_SZ%,		17AA3866_20220111_A0_cal.bin
+HKR,Tunings\B2\2\1\1,,				%REG_SZ%,		17AA3866_20220111_A1_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA3865_20220111_A0_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA3865_20220111_A1_diag.bin
+HKR,Tunings\B2\3\1\0,,				%REG_SZ%,		17AA3866_20220111_A0_diag.bin
+HKR,Tunings\B2\3\1\1,,				%REG_SZ%,		17AA3866_20220111_A1_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA3865_20220111_A0.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA3865_20220111_A1.bin
+HKR,Tunings\B2\4\1\0,,				%REG_SZ%,		17AA3866_20220111_A0.bin
+HKR,Tunings\B2\4\1\1,,				%REG_SZ%,		17AA3866_20220111_A1.bin
+
+[CONF_0235.Tunings.CopyFiles]
+17AA38B2_20221118.bin
+17AA38B2_20221118_cal.bin
+17AA38B2_20221118_diag.bin
+
+[CONF_0235.Tunings.AddReg]
+HKR,Tunings\B2\2\0\0,,				%REG_SZ%,		17AA38B2_20221118_cal.bin
+HKR,Tunings\B2\2\0\1,,				%REG_SZ%,		17AA38B2_20221118_cal.bin
+HKR,Tunings\B2\3\0\0,,				%REG_SZ%,		17AA38B2_20221118_diag.bin
+HKR,Tunings\B2\3\0\1,,				%REG_SZ%,		17AA38B2_20221118_diag.bin
+HKR,Tunings\B2\4\0\0,,				%REG_SZ%,		17AA38B2_20221118.bin
+HKR,Tunings\B2\4\0\1,,				%REG_SZ%,		17AA38B2_20221118.bin
+
+; ================= Strings section =====================
+
+[Strings]
+ProviderName="Cirrus Logic, Inc."
+MfgName="Cirrus Logic, Inc."
+Disk_Description="Cirrus Logic Amp Driver Extensions Installation Disk"
+CirrusSpeakerAmp="Cirrus Logic Awesome Speaker Amps"
+;GUID_DEVINTERFACE_cirrusI2cWriter="573E8C73-0CB4-4471-A1BF-FAB26C31D384"
+;DEVPKEY_DeviceInterface_UnrestrictedAppCapabilities="026e516e-b814-414b-83cd-856d6fef4822"
+;CustomCapability="microsoft.hsaTestCustomCapability_q536wpkpf5cy2"
+
+REG_SZ			= 0x00000000
+REG_BINARY		= 0x00000001
+REG_MULTI_SZ	= 0x00010000
+REG_DWORD		= 0x00010001
+REG_EXPAND_SZ	= 0x00020000

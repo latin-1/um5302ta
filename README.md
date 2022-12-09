@@ -170,7 +170,7 @@ options mem_sleep_default=deep
 
 <details>
 <summary>
-Patch: <a href="./patches/acpi/dsdt.patch">acpi/dsdt.patch</a>
+Patch: <a href="./patches/acpi/s3.patch">acpi/s3.patch</a>
 </summary>
 
 ```diff

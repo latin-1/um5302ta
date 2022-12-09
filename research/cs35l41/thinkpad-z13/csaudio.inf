@@ -1,0 +1,101 @@
+;/*++
+;
+;Copyright (c) Cirrus Logic, Inc.  All rights reserved.
+;
+;   THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+;   KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+;   IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+;   PURPOSE.
+;
+;Module Name:
+;
+;    csaudio.INF
+;
+;Abstract:
+;
+;    Setup Information for Cirrus Amp Driver
+;
+;--*/
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = MEDIA
+ClassGuid   = {4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider    = %ProviderName%
+CatalogFile = csaudio.cat
+DriverVer = 11/02/2022,2.13.57.982
+PnpLockDown = 1
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+
+[SourceDisksFiles]
+csaudio.sys = 1
+
+[DestinationDirs]
+DefaultDestDir = 13					; driver store directory
+
+[Manufacturer]
+%MfgName%=CirrusSpbAmp, NTamd64
+
+[CirrusSpbAmp.NTamd64]
+%CirrusSpeakerAmp% = CONF_0000, ACPI\VEN_CSC&DEV_3551						; generic CS35L51
+%CirrusSpeakerAmp% = CONF_0000, ACPI\VEN_CSC&DEV_3556						; generic CS35L56
+%CirrusSpeakerAmp% = CONF_0000, ACPI\VEN_CLSA&DEV_0100						; Y760-AMD
+%CirrusSpeakerAmp% = CONF_0000, ACPI\VEN_CLSA&DEV_0101						; Y760-TGL
+%CirrusSpeakerAmp% = CONF_0000, ACPI\VEN_CLSA&DEV_0102						; S760
+
+[CONF_0000.NT]
+CopyFiles=csaudio.DriverFiles
+AddReg=csaudio.Settings.AddReg
+
+[CONF_0000.NT.HW]
+AddReg=csaudio.DirectedPoFx.AddReg
+
+[CONF_0000.NT.Services]
+AddService=csaudio, %SPSVCINST_ASSOCSERVICE%, csaudio.AddService
+
+[csaudio.DriverFiles]
+csaudio.sys
+
+[csaudio.Settings.AddReg]
+HKR,Settings,DefaultChannelMap,		%REG_BINARY%,	00,01,01,00
+HKR,Settings,DefaultTuningSet,		%REG_DWORD%,	4
+HKR,Settings,VolumeRampRate,		%REG_DWORD%,	4
+HKR,Settings,DefaultSampleRate,		%REG_DWORD%,	3
+HKR,Settings,ForceAmpSafeState,		%REG_DWORD%,	0
+HKR,Settings,EnableHibernation,		%REG_DWORD%,	1
+HKR,Settings,EnableThresholdLogger,	%REG_DWORD%,	0
+HKR,Settings,EnableEsdResetPolling,	%REG_DWORD%,	0
+HKR,Settings,EnableIntHandler,		%REG_DWORD%,	1
+HKR,Settings,EnableI2cMultiMaster,	%REG_DWORD%,	0
+HKR,Settings,UseChannelBalance,		%REG_DWORD%,	0
+HKR,Settings,EnableAutoCal,			%REG_DWORD%,	0
+HKR,Settings,EnableAutoInit,		%REG_DWORD%,	0
+
+[csaudio.DirectedPoFx.AddReg]
+HKR,WDF,WdfDirectedPowerTransitionEnable,	%REG_DWORD%,	1
+
+[csaudio.AddService]
+DisplayName    = %csaudio.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\csaudio.sys
+
+[Strings]
+ProviderName="Cirrus Logic, Inc."
+MfgName="Cirrus Logic, Inc."
+Disk_Description="Cirrus Logic Amp Driver Installation Disk"
+CirrusSpeakerAmp="Cirrus Logic Awesome Speaker Amps"
+csaudio.SvcDesc="Cirrus Amp Driver"
+SPSVCINST_ASSOCSERVICE= 0x00000002
+;GUID_DEVINTERFACE_cirrusI2cWriter="573E8C73-0CB4-4471-A1BF-FAB26C31D384"
+;DEVPKEY_DeviceInterface_UnrestrictedAppCapabilities="026e516e-b814-414b-83cd-856d6fef4822"
+;CustomCapability="microsoft.hsaTestCustomCapability_q536wpkpf5cy2"
+
+REG_SZ			= 0x00000000
+REG_BINARY		= 0x00000001
+REG_MULTI_SZ	= 0x00010000
+REG_DWORD		= 0x00010001
+REG_EXPAND_SZ	= 0x00020000
