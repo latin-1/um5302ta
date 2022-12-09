@@ -41,7 +41,7 @@ index c2d4947844250..510cdec375c4d 100644
 
 ## Speaker
 
-⚠️ DSDT Patch Required (kernel version ≥ 6.0.9, [details](https://bugzilla.kernel.org/show_bug.cgi?id=216194))
+⚠️ DSDT patch required (kernel version ≥ 6.0.9, [details](https://bugzilla.kernel.org/show_bug.cgi?id=216194))
 
 <details>
 <summary>
@@ -324,4 +324,4 @@ See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
 
 ## Fingerprint
 
-❌ Not Work ([bug](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402))
+❌ Not work ([bug](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402))
