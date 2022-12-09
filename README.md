@@ -10,7 +10,7 @@ Using a kernel version ≥ 6.0.9 and applying the DSDT patch specified in the [s
 
 <details>
 <summary>
-<del>Patch: <a href="./patches/kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a></del> (in kernel 5.15.69 / 5.19.10 / 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
+<del>Patch: <a href="./patches/kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a></del> (included in kernel 5.15.69 / 5.19.10 / 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
 </summary>
 
 ```diff
@@ -156,7 +156,7 @@ See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
 
 <details>
 <summary>
-<del>Patch: <a href="./patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch">kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch</a></del> (in kernel 6.0.9 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=8d06679b25fc6813eb2438fac7fa13f4f3c2ef37">source</a>)
+<del>Patch: <a href="./patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch">kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch</a></del> (included in kernel 6.0.9 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=8d06679b25fc6813eb2438fac7fa13f4f3c2ef37">source</a>)
 </summary>
 
 ```diff
@@ -205,7 +205,7 @@ index e5f0549bf06d..3917f398334d 100644
 
 <details>
 <summary>
-<del>Patch: <a href="patches/kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch">kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch</a></del> (in kernel 6.0.3 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=4df5b13dec9e1b5a12db47ee92eb3f7da5c3deb5">source</a>)
+<del>Patch: <a href="patches/kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch">kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch</a></del> (included in kernel 6.0.3 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=4df5b13dec9e1b5a12db47ee92eb3f7da5c3deb5">source</a>)
 </summary>
 
 ```diff
@@ -241,7 +241,7 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 <details>
 <summary>
-<del>Patch: <a href="./patches/kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a></del> (in kernel 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=57117d7234dadfba2a83615b2a9369f6f2f9914f">source</a>)
+<del>Patch: <a href="./patches/kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a></del> (included in kernel 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=57117d7234dadfba2a83615b2a9369f6f2f9914f">source</a>)
 </summary>
 
 ```diff
