@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-Use a kernel version ≥ 6.0.9 and apply the [speaker](#speaker) DSDT patch.
+Use a kernel version ≥ 6.0.9 and apply the DSDT patch in the [speaker](#speaker) section.
 
 ## Keyboard
 
