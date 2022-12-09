@@ -2,9 +2,9 @@ GPIO
 ====
 
 INDEX    POSITION    GPIO1                     GPIO2                   RESET GPIO
------    --------    ----------------------    --------------------    ------------------------
-40       00          00 CS35L41_NOT_USED       02 CS35L41_INTERRUPT    PIN=04 GPIOD_OUT_LOW [?]
-41       01          01 CS35l41_VSPK_SWITCH    02 CS35L41_INTERRUPT    PIN=04 GPIOD_OUT_LOW [?]
+-----    --------    ----------------------    --------------------    --------------------
+40       00          00 CS35L41_NOT_USED       02 CS35L41_INTERRUPT    PIN=04 GPIOD_OUT_LOW
+41       01          01 CS35l41_VSPK_SWITCH    02 CS35L41_INTERRUPT    PIN=04 GPIOD_OUT_LOW
                      * This has no effect on an internal boost.
 
 Config
@@ -64,8 +64,15 @@ Device (SPKR) {
       Package () {
         "reset-gpios",
         Package () {
-          SPKR, 0, 0, 0, // [?]
-          SPKR, 0, 0, 0, // [?]
+          SPKR, 0, 0, 1,
+          SPKR, 0, 0, 1,
+        },
+      },
+      Package () {
+        "spk-id-gpios",
+        Package () {
+          SPKR, 2, 0, 0,
+          SPKR, 2, 0, 0,
         },
       },
       Package () {
