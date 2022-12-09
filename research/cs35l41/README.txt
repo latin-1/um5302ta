@@ -69,6 +69,10 @@ Device (SPKR) {
         },
       },
       Package () {
+        "cirrus,speaker-position",
+        Package () { 0, 1 },
+      },
+      Package () {
         "cirrus,gpio1-func",
         Package () { 0, 1 },
       },
