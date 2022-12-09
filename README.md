@@ -1,8 +1,8 @@
 # Zenbook S 13 OLED (UM5302TA)
 
-## Arch Linux
+## TL;DR
 
-Install [linux-mainline-um5302ta](https://aur.archlinux.org/packages/linux-mainline-um5302ta) from AUR, then skip to the [suspend](#suspend) section.
+Use a kernel version ≥ 6.0.9 and apply the [speaker](#speaker) DSDT patch.
 
 ## Keyboard
 
@@ -10,7 +10,7 @@ Install [linux-mainline-um5302ta](https://aur.archlinux.org/packages/linux-mainl
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a> (in kernel 5.15.69 / 5.19.10 / 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
+<del>Patch: <a href="./patches/kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a></del> (in kernel 5.15.69 / 5.19.10 / 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
 </summary>
 
 ```diff
@@ -45,7 +45,118 @@ index c2d4947844250..510cdec375c4d 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch">kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch</a> (in kernel 6.0.9 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=8d06679b25fc6813eb2438fac7fa13f4f3c2ef37">source</a>)
+Patch: <a href="./patches/acpi/spkr-dsd.patch">acpi/spkr-dsd.patch</a>
+</summary>
+
+```diff
+diff --git a/dsdt.dsl b/dsdt.dsl
+index 663aa79..f485c41 100644
+--- a/dsdt.dsl
++++ b/dsdt.dsl
+@@ -18,7 +18,7 @@
+  *     Compiler ID      "INTL"
+  *     Compiler Version 0x20200717 (538969879)
+  */
+-DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
++DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x0107200A)
+ {
+     External (_SB_.ALIB, MethodObj)    // 2 Arguments
+     External (_SB_.APTS, MethodObj)    // 1 Arguments
+@@ -14734,6 +14734,85 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
+             Method (_DIS, 0, NotSerialized)  // _DIS: Disable Device
+             {
+             }
++
++            Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
++            {
++                ToUUID ("daffd814-6eba-4d8c-8a91-bc9bbf4aa301") /* Device Properties for _DSD */,
++                Package (0x06)
++                {
++                    Package (0x02)
++                    {
++                        "cirrus,dev-index",
++                        Package (0x02)
++                        {
++                            0x40,
++                            0x41
++                        }
++                    },
++
++                    Package (0x02)
++                    {
++                        "reset-gpios",
++                        Package (0x08)
++                        {
++                            SPKR,
++                            Zero,
++                            Zero,
++                            Zero,
++                            SPKR,
++                            Zero,
++                            Zero,
++                            Zero
++                        }
++                    },
++
++                    Package (0x02)
++                    {
++                        "spk-id-gpios",
++                        Package (0x08)
++                        {
++                            SPKR,
++                            0x02,
++                            Zero,
++                            Zero,
++                            SPKR,
++                            0x02,
++                            Zero,
++                            Zero
++                        }
++                    },
++
++                    Package (0x02)
++                    {
++                        "cirrus,speaker-position",
++                        Package (0x02)
++                        {
++                            Zero,
++                            One
++                        }
++                    },
++
++                    Package (0x02)
++                    {
++                        "cirrus,gpio1-func",
++                        Package (0x02)
++                        {
++                            Zero,
++                            One
++                        }
++                    },
++
++                    Package (0x02)
++                    {
++                        "cirrus,gpio2-func",
++                        Package (0x02)
++                        {
++                            0x02,
++                            0x02
++                        }
++                    }
++                }
++            })
+         }
+     }
+
+```
+
+See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
+
+</details>
+
+<details>
+<summary>
+<del>Patch: <a href="./patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch">kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch</a></del> (in kernel 6.0.9 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=8d06679b25fc6813eb2438fac7fa13f4f3c2ef37">source</a>)
 </summary>
 
 ```diff
@@ -67,7 +178,7 @@ index 701a72ec5629a..b4f7ff8cfe41b 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/cs35l42-hda-no-acpi-dsd-csc3551.patch">kernel/cs35l42-hda-no-acpi-dsd-csc3551.patch</a> (rejected, <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20220703053225.2203-1-xw897002528@gmail.com/">source</a>)
+<del>Patch: <a href="./patches/kernel/cs35l42-hda-no-acpi-dsd-csc3551.patch">kernel/cs35l42-hda-no-acpi-dsd-csc3551.patch</a></del> (rejected, <a href="https://patchwork.kernel.org/project/alsa-devel/patch/20220703053225.2203-1-xw897002528@gmail.com/">source</a>)
 </summary>
 
 ```diff
@@ -94,7 +205,7 @@ index e5f0549bf06d..3917f398334d 100644
 
 <details>
 <summary>
-Patch: <a href="patches/kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch">kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch</a> (in kernel 6.0.3 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=4df5b13dec9e1b5a12db47ee92eb3f7da5c3deb5">source</a>)
+<del>Patch: <a href="patches/kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch">kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch</a></del> (in kernel 6.0.3 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=4df5b13dec9e1b5a12db47ee92eb3f7da5c3deb5">source</a>)
 </summary>
 
 ```diff
@@ -130,7 +241,7 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 <details>
 <summary>
-Patch: <a href="./patches/kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a> (in kernel 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=57117d7234dadfba2a83615b2a9369f6f2f9914f">source</a>)
+<del>Patch: <a href="./patches/kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch">kernel/Bluetooth-btusb-Add-a-new-VID-PID-0489-e0e2-for-MT7922.patch</a></del> (in kernel 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=57117d7234dadfba2a83615b2a9369f6f2f9914f">source</a>)
 </summary>
 
 ```diff
@@ -207,9 +318,9 @@ index 01b8c57..fa83d84 100644
          Zero,
 ```
 
-</details>
-
 See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
+
+</details>
 
 ## Fingerprint
 
