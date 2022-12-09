@@ -41,11 +41,11 @@ index c2d4947844250..510cdec375c4d 100644
 
 ## Speaker
 
-⚠️ Patch Required ([details](https://bugzilla.kernel.org/show_bug.cgi?id=216194))
+⚠️ DSDT Patch Required (kernel version ≥ 6.0.9, [details](https://bugzilla.kernel.org/show_bug.cgi?id=216194))
 
 <details>
 <summary>
-Patch: <a href="./patches/acpi/spkr-dsd.patch">acpi/spkr-dsd.patch</a>
+Patch: <a href="./patches/dsdt/spkr-dsd.patch">dsdt/spkr-dsd.patch</a>
 </summary>
 
 ```diff
@@ -281,7 +281,7 @@ options mem_sleep_default=deep
 
 <details>
 <summary>
-Patch: <a href="./patches/acpi/s3.patch">acpi/s3.patch</a>
+Patch: <a href="./patches/dsdt/s3.patch">dsdt/s3.patch</a>
 </summary>
 
 ```diff
