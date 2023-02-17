@@ -41,11 +41,11 @@ index c2d4947844250..510cdec375c4d 100644
 
 ## Speaker
 
-⚠️ DSDT patch required (kernel version ≥ 6.0.9, [details](https://bugzilla.kernel.org/show_bug.cgi?id=216194))
+✔️ Work (ASUS BIOS version 311 required)
 
 <details>
 <summary>
-Patch: <a href="./patches/dsdt/spkr-dsd.patch">dsdt/spkr-dsd.patch</a>
+<del>Patch: <a href="./patches/dsdt/spkr-dsd.patch">dsdt/spkr-dsd.patch</a></del>
 </summary>
 
 ```diff
