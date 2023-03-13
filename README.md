@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-Using a kernel version ≥ 6.0.9 and applying the DSDT patch specified in the [speaker](#speaker) section.
+Using a kernel version ≥ 6.0.9 with ASUS BIOS version ≥ 301.
 
 ## Keyboard
 
