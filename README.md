@@ -10,7 +10,7 @@ Using a kernel version ≥ 6.0.9 with ASUS BIOS version ≥ 311.
 
 <details>
 <summary>
-<del>Patch: <a href="./patches/kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a></del> (included in kernel 5.15.69 / 5.19.10 / 6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
+<del>Patch: <a href="./patches/kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a></del> (included in kernel 5.15.69/5.19.10/6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
 </summary>
 
 ```diff
@@ -156,7 +156,7 @@ See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
 
 <details>
 <summary>
-<del>Patch: <a href="./patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch">kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch</a></del> (included in kernel 6.0.9 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=8d06679b25fc6813eb2438fac7fa13f4f3c2ef37">source</a>)
+<del>Patch: <a href="./patches/kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch">kernel/ALSA-hda-realtek-Add-quirk-for-ASUS-Zenbook-using-CS35L41.patch</a></del> (included in kernel 6.0.9/6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=8d06679b25fc6813eb2438fac7fa13f4f3c2ef37">source</a>)
 </summary>
 
 ```diff
@@ -205,7 +205,7 @@ index e5f0549bf06d..3917f398334d 100644
 
 <details>
 <summary>
-<del>Patch: <a href="patches/kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch">kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch</a></del> (included in kernel 6.0.3 / 6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=4df5b13dec9e1b5a12db47ee92eb3f7da5c3deb5">source</a>)
+<del>Patch: <a href="patches/kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch">kernel/ASoC-amd-yc-Add-ASUS-UM5302TA-into-DMI-table.patch</a></del> (included in kernel 6.0.3/6.1, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=4df5b13dec9e1b5a12db47ee92eb3f7da5c3deb5">source</a>)
 </summary>
 
 ```diff
@@ -271,7 +271,7 @@ index 205b7d3b1cc3a..21135a419bcc3 100644
 
 Modern standby should work out-of-box.
 
-### S3 Sleep (deep, not recommended)
+### S3 Sleep (deep sleep) (not recommended)
 
 S3 sleep may be unstable and cause freezing.
 
