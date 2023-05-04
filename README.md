@@ -254,7 +254,7 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 ### Known Issues
 
-- Volume is quite low: <https://bugzilla.kernel.org/show_bug.cgi?id=216495>
+- Volume is quite low: ([bug report](https://bugzilla.kernel.org/show_bug.cgi?id=216495))
 
 ## Bluetooth
 
@@ -359,4 +359,4 @@ See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
 
 ## Fingerprint
 
-❌ Not work ([bug](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402))
+❌ Not work ([bug report](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402))
