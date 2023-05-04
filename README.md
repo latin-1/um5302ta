@@ -254,7 +254,7 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 ### Known Issues
 
-- Volume is quite low: ([bug report](https://bugzilla.kernel.org/show_bug.cgi?id=216495))
+- Volume is quite low ([bug report](https://bugzilla.kernel.org/show_bug.cgi?id=216495))
 
 ## Bluetooth
 
