@@ -291,6 +291,14 @@ index 205b7d3b1cc3a..21135a419bcc3 100644
 </blockquote>
 </details>
 
+## Graphics
+
+✔️ Work
+
+### Known Issues
+
+- Screen flickering ([bug report](https://gitlab.freedesktop.org/drm/amd/-/issues/2352))
+
 ## Suspend
 
 ✔️ Work
