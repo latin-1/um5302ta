@@ -10,6 +10,7 @@ Using a kernel version ≥ 6.0.9 with ASUS BIOS version ≥ 311.
 
 <details>
 <summary>Details</summary>
+<blockquote>
 
 <details>
 <summary>
@@ -42,6 +43,7 @@ index c2d4947844250..510cdec375c4d 100644
 
 </details>
 
+</blockquote>
 </details>
 
 ## Speaker
@@ -50,6 +52,7 @@ index c2d4947844250..510cdec375c4d 100644
 
 <details>
 <summary>Details</summary>
+<blockquote>
 
 <details>
 <summary>
@@ -207,6 +210,7 @@ index e5f0549bf06d..3917f398334d 100644
 
 </details>
 
+</blockquote>
 </details>
 
 ## Microphone
@@ -215,6 +219,7 @@ index e5f0549bf06d..3917f398334d 100644
 
 <details>
 <summary>Details</summary>
+<blockquote>
 
 <details>
 <summary>
@@ -244,6 +249,7 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 </details>
 
+</blockquote>
 </details>
 
 ### Known Issues
@@ -256,6 +262,7 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 <details>
 <summary>Details</summary>
+<blockquote>
 
 <details>
 <summary>
@@ -281,6 +288,7 @@ index 205b7d3b1cc3a..21135a419bcc3 100644
 
 </details>
 
+</blockquote>
 </details>
 
 ## Suspend
@@ -297,6 +305,7 @@ S3 sleep may be unstable and cause freezing.
 
 <details>
 <summary>Details</summary>
+<blockquote>
 
 ```
 options mem_sleep_default=deep
@@ -345,6 +354,7 @@ See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
 
 </details>
 
+</blockquote>
 </details>
 
 ## Fingerprint
