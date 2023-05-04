@@ -9,6 +9,9 @@ Using a kernel version ≥ 6.0.9 with ASUS BIOS version ≥ 311.
 ✔️ Work (kernel version ≥ 5.19.10 or ≥ 5.15.69 (longterm))
 
 <details>
+<summary>Details</summary>
+
+<details>
 <summary>
 <del>Patch: <a href="./patches/kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch">kernel/ACPI-skip-IRQ-override-on-AMD-Zen-platforms.patch</a></del> (included in kernel 5.15.69/5.19.10/6.0, <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9946e39fe8d0a5da9eb947d8e40a7ef204ba016e">source</a>)
 </summary>
@@ -39,9 +42,14 @@ index c2d4947844250..510cdec375c4d 100644
 
 </details>
 
+</details>
+
 ## Speaker
 
 ✔️ Work (kernel version ≥ 6.0.9, ASUS BIOS version ≥ 311)
+
+<details>
+<summary>Details</summary>
 
 <details>
 <summary>
@@ -199,9 +207,14 @@ index e5f0549bf06d..3917f398334d 100644
 
 </details>
 
+</details>
+
 ## Microphone
 
 ✔️ Work (kernel version ≥ 6.0.3)
+
+<details>
+<summary>Details</summary>
 
 <details>
 <summary>
@@ -231,6 +244,8 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 </details>
 
+</details>
+
 ### Known Issues
 
 - Volume is quite low: <https://bugzilla.kernel.org/show_bug.cgi?id=216495>
@@ -238,6 +253,9 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 ## Bluetooth
 
 ✔️ Work (kernel version ≥ 6.0)
+
+<details>
+<summary>Details</summary>
 
 <details>
 <summary>
@@ -263,6 +281,8 @@ index 205b7d3b1cc3a..21135a419bcc3 100644
 
 </details>
 
+</details>
+
 ## Suspend
 
 ✔️ Work
@@ -274,6 +294,9 @@ Modern standby should work out-of-box.
 ### S3 Sleep (deep sleep) (not recommended)
 
 S3 sleep may be unstable and cause freezing.
+
+<details>
+<summary>Details</summary>
 
 ```
 options mem_sleep_default=deep
@@ -319,6 +342,8 @@ index 01b8c57..fa83d84 100644
 ```
 
 See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
+
+</details>
 
 </details>
 
