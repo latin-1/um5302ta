@@ -254,7 +254,8 @@ index e0b24e1daef3d..5eab3baf3573d 100644
 
 ### Known Issues
 
-- Volume is quite low ([bug report](https://bugzilla.kernel.org/show_bug.cgi?id=216495))
+- Volume is quite low
+  ([bug report](https://bugzilla.kernel.org/show_bug.cgi?id=216495))
 
 ## Bluetooth
 
@@ -297,7 +298,8 @@ index 205b7d3b1cc3a..21135a419bcc3 100644
 
 ### Known Issues
 
-- Screen flickering ([bug report](https://gitlab.freedesktop.org/drm/amd/-/issues/2352))
+- Screen flickering
+  ([bug report](https://gitlab.freedesktop.org/drm/amd/-/issues/2352))
 
 ## Suspend
 
@@ -367,4 +369,5 @@ See also: [DSDT - ArchWiki](https://wiki.archlinux.org/title/DSDT)
 
 ## Fingerprint
 
-❌ Not work ([bug report](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402))
+❌ Not work
+([bug report](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/402))
